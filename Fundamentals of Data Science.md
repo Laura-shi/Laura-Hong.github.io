@@ -5,25 +5,37 @@
 ##### * Data is an event of some energy pattern in the physical world hitting a sensor and being recorded somewhere. #####
 
 ### 2. Standard Methodology ###
-<ol ###>* Problem Definition/goal
+<ol>* Problem Definition/goal
   <li>Identify/specify goals of the data analysis</li>
   <li>commit to specific deliverables</li>
-</ol ###>
+</ol>
 </ol> * Data pro-cessing 
   <li> Identify appropriate data</li>
   <li> Acquire data (gather, lookup,understand)<br> Necessary/Relevant? Sufficient?Cleansed?</li>
-</ol ###>
-<ol ###> * Data Processing
+</ol>
+<ol> * Data Processing
   <li>Identify methods(gather,cleansse,store)</li>
   <li>Carry out the analysis(patterns,trend,preditions?)</li>
-</ol ###>
-<ol ###> * Data post-processing
+</ol>
+<ol> * Data post-processing
     <li>Visualize and present</li>
     <li>Deploy and evaluate. Iterate, if necessary</li>
-</ol ###>
-    
-   
+</ol>
 
+### Data Life Cycle ###
+<li> Analysis </li>
+<li> Application </li>
+<li> Pre-processing </li>   
+
+### What is Data Science (DS)? ###
+#### Fundamentals of DS is to turn data into information and knowledge ####
+#### DS is interdisciplinary/requires a lot of help to be effective:####
+
+## Major Kinds of Problems in DS ##
+### Most problems in DS reduce to three fundamental kinds of problems, all of them computational problems ###
+#### Classification #### 
+#### Prediction ####
+#### Clustering ####
     
 
 
