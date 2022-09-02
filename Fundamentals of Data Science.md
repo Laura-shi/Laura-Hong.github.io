@@ -5,7 +5,7 @@
 ##### * Data is an event of some energy pattern in the physical world hitting a sensor and being recorded somewhere. #####
 
 ### 2. Standard Methodology ###
-<ur>##### * Problem Definition/goal #####
+<ur> Problem Definition/goal
   <ol>Identify/specify goals of the data analysis<ol>
   <ol>commit to specific deliverables<ol>
   </ur> 
