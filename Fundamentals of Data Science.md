@@ -57,13 +57,15 @@
     <li> *Digital files, Spreadsheets(excel)</li>
     <li> *Databases(hierarchical,relational,nonrelational) MySQL, Oracle, SAS SysBase,...</li>
   </ol>
-  <ol>Dtawarhouses/farms
+  <ol>Dtawarhouses/farms <br>
     <li>Central repositories of entire data corpora of an organization(usually very large) data</li>
   </ol>
-  <ol>Data Banks
+  <ol>Data Banks <br>
     <li>Centralized organizations storing all kinds of data for creation,public access/transaction</li>
   </ol>
-  <ol>Clouds
-    <li>Repositionries of heterogeneous from multiple sources data and means to crunch it</li>
+  <ol>Clouds <br>
+    Repositionries of heterogeneous from multiple sources data and means to crunch it
   </ol>
 </p>
+
+
