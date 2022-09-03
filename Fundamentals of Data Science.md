@@ -58,13 +58,23 @@
     <li> *Databases(hierarchical,relational,nonrelational) MySQL, Oracle, SAS SysBase,...</li>
   </ol>
   <ol>Dtawarhouses/farms <br>
-    <li>Central repositories of entire data corpora of an organization(usually very large) data</li>
+    Central repositories of entire data corpora of an organization(usually very large) data
   </ol>
   <ol>Data Banks <br>
-    <li>Centralized organizations storing all kinds of data for creation,public access/transaction</li>
+    Centralized organizations storing all kinds of data for creation,public access/transaction
   </ol>
   <ol>Clouds <br>
     Repositionries of heterogeneous from multiple sources data and means to crunch it
+  </ol>
+  <ol>Relational Databases<br>Primary currency is a table containing records
+    <li>primary key(s): handle(s) to "address" the records</li>
+    <li>attributes(columns)</li>
+    <li>records(turples) consisting of a vector of values for each attribute in the table</li>
+  </ol>
+  <ol>RDBSs provide a backend to manage the tables / records(create, edit,delete,query)</ol>
+  <ol>Structured Query Language (SQL)<br> standardizes the queries across RDBMs</ol>
+  <ol>RDB Normalization<br> Codd introduced rules to organize RDBs and optimize data searching and processing:<br>
+    <li>First Normal Form(create an ontology/schema)</li>
   </ol>
 </p>
 
