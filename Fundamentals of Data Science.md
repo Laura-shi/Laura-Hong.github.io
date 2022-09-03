@@ -22,16 +22,16 @@
     <li>Deploy and evaluate. Iterate, if necessary</li>
 </ol>
 
-### Data Life Cycle ###
+### 3. Data Life Cycle ###
 <li> Analysis </li>
 <li> Application </li>
 <li> Pre-processing </li>   
 
-### What is Data Science (DS)? ###
-#### Fundamentals of DS is to turn data into information and knowledge ####
-#### DS is interdisciplinary/requires a lot of help to be effective:####
+### 4.What is Data Science (DS)? ###
+#### * Fundamentals of DS is to turn data into information and knowledge ####
+#### * DS is interdisciplinary/requires a lot of help to be effective:####
 
-## Major Kinds of Problems in DS ##
+### 5.Major Kinds of Problems in DS ###
 ### Most problems in DS reduce to three fundamental kinds of problems, all of them computational problems ###
 #### Classification #### 
 #### Prediction ####
