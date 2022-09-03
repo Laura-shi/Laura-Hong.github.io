@@ -29,7 +29,7 @@
 
 ### 4.What is Data Science (DS)? ###
 #### * Fundamentals of DS is to turn data into information and knowledge ####
-#### * DS is interdisciplinary/requires a lot of help to be effective:####
+#### * DS is interdisciplinary/requires a lot of help to be effective ####
 
 ### 5.Major Kinds of Problems in DS ###
 ### Most problems in DS reduce to three fundamental kinds of problems, all of them computational problems ###
@@ -37,6 +37,16 @@
 #### Prediction ####
 #### Clustering ####
     
+## Why pre-processing? ##   
+<p>
+### "A company's most important asset is information. A corporation's ability to compete, adapt, and grow in a business climate of rapid change is dependent in large measure on how well the company uses information to make decisions...<br> Sharing information that isn't clean and consolidated to the fullest extent can substantially reduce the effectiveness of a system of significant investment and considerable pay-off potential."
+</p>
 
-
-
+## How to understand your data corpus? ##
+<li>A data corpus consists of a finite number of data tables, possible of varius dimensions, comprising all the data for the project</li>
+<li>A data point(or record)is an nDimensional vector of features/predictors/variables/attributes/columns:
+  <li>* Each value is alphabetic or numeric</li>
+  <li>* Usually n>> 1 (n is the dimensionality of the point)</li>
+</li>
+<li>Oranize your data by clustering points of the same dem into data tables(attributes are column headers; data points/records are the rows/tuples)</li>
+<li>If at all possible, design an ontology(way to organize the data) to have a better chance of understanding the corpus</li>
