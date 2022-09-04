@@ -95,3 +95,11 @@
 </p>
 
 
+## Storage Methods (SQL: MySQL)##
+<p>
+  <li>Download/install MySQL from http://dev.mysql.com/downloads/ <br> (Make sure you enter and remember a pwd for root)</li>
+  <li>Start it:<br>Windows: >mysql -u root -p (from a RUN window)<br>Mac: navigate to/usr/local/mysql/bin and enter<br> >mysql -u root -p <br>[Will need to enter userID/pwd you used to install it]
+  </li>
+  <li>Now you can play using SQL commands,e.g. to show all databases enter <br>More (without the mysql > prompt) below </li>
+  
+</p>
