@@ -53,29 +53,39 @@
 
 ## Storage Methods ##
 <p>
-  <ol>Databases
+  <ol>1.Databases
     <li> *Digital files, Spreadsheets(excel)</li>
     <li> *Databases(hierarchical,relational,nonrelational) MySQL, Oracle, SAS SysBase,...</li>
   </ol>
-  <ol>Dtawarhouses/farms <br>
+  <ol>2.Dtawarhouses/farms <br>
     Central repositories of entire data corpora of an organization(usually very large) data
   </ol>
-  <ol>Data Banks <br>
+  <ol>3.Data Banks <br>
     Centralized organizations storing all kinds of data for creation,public access/transaction
   </ol>
-  <ol>Clouds <br>
+  <ol>4.Clouds <br>
     Repositionries of heterogeneous from multiple sources data and means to crunch it
   </ol>
-  <ol>Relational Databases<br>Primary currency is a table containing records
+  <ol>5.Relational Databases<br>Primary currency is a table containing records
     <li>primary key(s): handle(s) to "address" the records</li>
     <li>attributes(columns)</li>
     <li>records(turples) consisting of a vector of values for each attribute in the table</li>
   </ol>
-  <ol>RDBSs provide a backend to manage the tables / records(create, edit,delete,query)</ol>
+  <ol>6.RDBSs provide a backend to manage the tables / records(create, edit,delete,query)</ol>
   <ol>Structured Query Language (SQL)<br> standardizes the queries across RDBMs</ol>
   <ol>RDB Normalization<br> Codd introduced rules to organize RDBs and optimize data searching and processing:<br>
     <li>First Normal Form(create an ontology/schema)</li>
+      <ol>
+        <li>*Eliminate repeating groups in individual tables</li>
+        <li>*Create a separate table for each kind of related data</li>
+        <li>*Identify each record in a table with a primary key as an atom</li>
+      </ol>
+    <li>Second Normal Form =1NF+(no redundancy)</li>
+      <li>*primary attributes are independent of all others candiate keys</li>
   </ol>
+  <ol>Third Normal Form=2NF+...</ol>
+    <li>*all the attributes in a table are determined only by the primary keys and not other attributes</li>
+   In summary: any attribute denpends on the (primary) key, the whole key and nothing but the key.
 </p>
 
 
