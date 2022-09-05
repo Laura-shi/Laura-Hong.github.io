@@ -98,8 +98,12 @@
 ## Storage Methods (SQL: MySQL)##
 <p>
   <li>Download/install MySQL from http://dev.mysql.com/downloads/ <br> (Make sure you enter and remember a pwd for root)</li>
-  <li>Start it:<br>Windows: >mysql -u root -p (from a RUN window)<br>Mac: navigate to/usr/local/mysql/bin and enter<br> >mysql -u root -p <br>[Will need to enter userID/pwd you used to install it]
+  <li>Start it:<br>Windows: >mysql -u root -p (from a RUN window) use the databases cline line<br>Mac: navigate to/usr/local/mysql/bin and enter<br> >mysql -u root -p <br>[Will need to enter userID/pwd you used to install it]<br> for example: input the command as below:<br>  cd/usr/local/mysql/bin; ls    <br> and then input:   .mysql -u root -p<br> and then the terminal will let you inputing the password of your databaes;
   </li>
   <li>Now you can play using SQL commands,e.g. to show all databases enter <br>More (without the mysql > prompt) below </li>
   
 </p>
+
+## How to start the MYSQL server ##
+### run command sudo/usr/local/mysql/support-files/mysql.server star<br> and then enter the password ###
+
