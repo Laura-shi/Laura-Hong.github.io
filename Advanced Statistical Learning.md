@@ -1,8 +1,15 @@
 # Advanced Statistical Learning I #
+## chapter 2 Assessing Model Accuracy ##
 <img width="826" alt="image" src="https://user-images.githubusercontent.com/60895448/188942194-3f04cb38-eaa3-4be5-a643-94f5e1bea757.png">
 <img width="913" alt="image" src="https://user-images.githubusercontent.com/60895448/188942270-ed4db334-9487-4e2a-a6b6-3cf1e125c540.png">
 <img width="911" alt="image" src="https://user-images.githubusercontent.com/60895448/188942347-5495607d-5e7a-4f10-9a18-25eecb469932.png">
 <img width="910" alt="image" src="https://user-images.githubusercontent.com/60895448/188942429-c243d7a7-db90-4216-865e-8cb472adcb95.png">
+<img width="812" alt="image" src="https://user-images.githubusercontent.com/60895448/188942724-071663e6-4ae5-46b5-8d82-726fb2de2f76.png">
+<img width="763" alt="image" src="https://user-images.githubusercontent.com/60895448/188942871-3ca8d160-d7ce-4731-b117-6efdf81e57fd.png">
+<img width="864" alt="image" src="https://user-images.githubusercontent.com/60895448/188943597-b8a51db1-a004-4bf2-b4d8-0bd842e9e697.png">
+<img width="889" alt="image" src="https://user-images.githubusercontent.com/60895448/188943695-bf6c44e0-3135-494f-8654-80e6aa2a56cc.png">
+
+
 
 ## chapter 2 Assessing Model Accuracy ##
 ### 2.2 The Bias-Variance ###
