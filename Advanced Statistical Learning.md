@@ -26,6 +26,10 @@
 ![image](https://user-images.githubusercontent.com/60895448/188809946-6070c52c-3d4a-4552-8f56-d421fc4a6216.png)
 ![image](https://user-images.githubusercontent.com/60895448/188810102-c5ad379d-53f1-4329-816c-75dff2f5281c.png)
 ![image](https://user-images.githubusercontent.com/60895448/188810410-ed606c89-6552-4c9e-af10-39a8c9beabee.png)
+![image](https://user-images.githubusercontent.com/60895448/188811518-9cea9992-bc64-4049-9a8b-afc8500d3c60.png)
+![image](https://user-images.githubusercontent.com/60895448/188811836-6e019c29-e2cd-426e-8de5-05f2f3ec3879.png)
+<p>Where the expectation averages the probability over all possible values of X.<br> The Bayes error rate is analogous to the irreducible error, discussed earlier.</p>
+
 
 
 
