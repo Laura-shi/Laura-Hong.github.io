@@ -23,4 +23,10 @@
 <p><strong>The flexible green curve is following the observations very closely. It has high variance because changing any one of these data points may cause the estimate estimated f to change considerably. In contrast, the orange line is relatively inflexible and has low variance, because moving any single observation will likely cause only small shift in the position of the line.<br>The true f is substantially non-linear, so linear regression(orange curve)results in high bias in this example.<br>In general, more flexible methods result in less bias.</strong></p>
 <p>----------------------------------------------</p><br>
 
+![image](https://user-images.githubusercontent.com/60895448/188809946-6070c52c-3d4a-4552-8f56-d421fc4a6216.png)
+![image](https://user-images.githubusercontent.com/60895448/188810102-c5ad379d-53f1-4329-816c-75dff2f5281c.png)
+![image](https://user-images.githubusercontent.com/60895448/188810410-ed606c89-6552-4c9e-af10-39a8c9beabee.png)
+
+
+
 # Advanced Statistical Learning II #
