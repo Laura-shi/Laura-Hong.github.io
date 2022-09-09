@@ -344,8 +344,114 @@
 
 ![image](https://user-images.githubusercontent.com/60895448/189433038-c98669b4-1748-4c08-bd6f-37cb60f7288c.png)
 ![image](https://user-images.githubusercontent.com/60895448/189433075-6aca5aae-f0c0-4272-b278-30ebb838edec.png)
+![image](https://user-images.githubusercontent.com/60895448/189433610-03731b17-bf43-49e4-b549-41834467802b.png)
 
+ ## Other matrix functions/op. ##
+ <li>dim(A) <br>
+ #returns dimension of matrix or array A</li>
+ <li>nrow(A),ncol(A), <br>
+NROW(A),NCOL(A) <br>
+#number of rows and columns of matrix A</li>
+ <li>rownames(A),colnames(A) <br>
+#names of rows and columns of matrix A</li>
+ <li>%*%  <br>
+#    matrix multiplication</li>
+ <li>t(A) # transpose of matrix A</li> 
+ <li>solve(A) # inverse of matrix A</li>
+ <li>svd(A),qr(A),chol(A)  <br>
+ # singular value, QR, cholesky decomposition of matrix A</li>
+ <li>eigen(A),det(A) <br>
+# eigenvalues and eigenvectors, determinant of matrix A</li>
+
+## Combining matrices and arrays ##
+ <li>cbind(x,y) #   binds matrices, dataframes,... columnwise</li>
+ <li>rbind(x, y)  #   binds matrices, dataframes,... rowwise</li>
+![image](https://user-images.githubusercontent.com/60895448/189434926-65e6cdb8-ee6e-4485-ad19-3a6f833e1ba6.png)
+
+## Data frames ##
+  <li>data frame is a rectangular table with rows and columns; data within each column has the same type (e.g. number, text, logical), but different columns may have different types.</li>
+  <li>data.frame(): <br>
+• an R command to create data frames, tightly coupled collections of variables which share many of the properties of matrices and of lists, <br>
+• used as the fundamental data structure by most of R's modeling software.</li>
+
+## Creating data frames ## 
+<li>You can recreate a data frame from scratch by <br>
+my_data <- edit(data.frame()) <br>
+  that you can enter data into the given form.</li>
+ <li>You can also import from external file (to be discussed later) or you can save the data created.</li>
+![image](https://user-images.githubusercontent.com/60895448/189435484-60a382a7-3e4e-4254-bf74-3f32cf328ba8.png)
 
      
+## Data subsetting in R ## 
+<li>x[n], x[-n] # select nth element, all but nth element from vector x</li>
+<li>x[1:n], x[-(1:n)] # select first n elements, all but first n elements from x</li>
+<li>x[c(1,4,6)] # select element 1,4 and 6 from vector x</li> 
+<li>x[x>3  & x<5] #   select elements that meet condition</li>
+<li>which(x==3) # returns indices to values x that meet the condition</li>
+![image](https://user-images.githubusercontent.com/60895448/189435949-d5a124cf-f0a0-467b-8606-038ca8f94f17.png)
 
-  
+     
+## Subsetting matrix/data frame in R ##
+<li>Same rule for vector subsetting can be used for matrix or data frame (to be discussed later)</li>
+<li>A[i,j], A[,j], A[i,] # selects element i,j, the jth column, i-th row from matrix A</li>
+<li>A[,cols] # selects columns cols from matrix A</li>
+<li>A[“name”,] # selects row named “name” from matrix A</li>
+<li>D$name, D[[“name”]] # selects column named “name” from data frame D</li>
+![image](https://user-images.githubusercontent.com/60895448/189436488-84869f69-4dcc-437f-87a3-62ecbea36c80.png)
+     
+     
+## if statements in R ## 
+<li>if, else, else if</li>
+     <ol>
+       <li>#conditionally execute statements</li>
+       <li>#useful only when comparing two values, not two vectors (why not?)</li>
+       <li># often used with all() or any()</li>
+     </ol>
+<li>R example:</li>
+<li>if(all(x < 0)) cat("all x values are negative\n")</li>
+<li>ifelse(cond,yes,no)<br>
+  # if (component-wise) condition is true/false, executes (component-wise) statement ‘yes’/’no’</li>
+<li>x <- c(6:-4)</li>
+<li>sqrt(x)#- gives warning</li>
+<li>sqrt(ifelse(x >= 0, x, NA))# no warning </li>
+     
+     
+## Repetitive execution ## 
+<li>for (el in seq) {expr} <br>
+ #repeat expr for each element in seq</li>
+<li>while (cond) {expr} <br>
+ #repeat expression while condition is true <br>
+ #be very careful for vector comparison</li>
+<li>repeat {expr}  <br>
+ #repeat until break encountered</li>
+
+## Breaking repetitive execution ## 
+<li>break <br>
+it terminates execution of for, while, repeat loops <br>
+it can be used to terminate any loop, possibly abnormally. </li>
+<li>next <br>
+it transfers execution to next iteration in loops <br>
+it can be used to discontinue one particular cycle and skip to the “next”.</li>
+![image](https://user-images.githubusercontent.com/60895448/189438071-c048cc62-dd0c-4dba-b55f-23aee83887e3.png)
+![image](https://user-images.githubusercontent.com/60895448/189438329-db06e90c-f2ee-4e98-b16d-7c7d87ffb20f.png)
+![image](https://user-images.githubusercontent.com/60895448/189438636-d0a46857-e08c-4714-a7d2-e8878a2b3d44.png)
+![image](https://user-images.githubusercontent.com/60895448/189438782-6823c026-3c42-40da-94b1-521656d4db95.png)
+![image](https://user-images.githubusercontent.com/60895448/189438977-a73130e7-f6e5-4d47-81a2-9727247e6cf7.png)
+     
+## Input output in R ## 
+<p>By default, the input is from the keyboard and output is to the screen. However, there are many other methods can be used.</p>
+<li>write.table(x,file) # writes object x as a dataframe to a table</li>
+<li>read.table(file)# reads table from space-delimited file, aligned in columns</li>
+<li>read.csv(file),read.delim(file) # reads table comma- delimited or tab-delimited file</li>
+![image](https://user-images.githubusercontent.com/60895448/189439320-40bbbc38-762b-4ce8-9ad5-7dbffa9837f1.png)
+ 
+## Importing and exporting data ## 
+<p>There are many ways to get data into R and out of R. Most programs (e.g. Excel), as well as humans, know how to deal with rectangular tables in the form of tab-delimited text files.</p>
+<li>x = read.delim(“filename.txt”) <br>
+also: read.table, read.csv</li>
+<li>write.table(x, file=“x.txt”, sep=“\t”)</li>
+
+## Importing data ## 
+<li>ype conversions: by default, the read functions try to guess and autoconvert the data types of the different columns (e.g. number, factor, character). </li>
+<li>There are options as.is and colClasses to control this – read the online help</li>
+<li>Understand the conventions your input files use and set the quote options accordingly.</li>
