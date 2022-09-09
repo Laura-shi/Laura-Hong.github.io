@@ -163,3 +163,16 @@
   <li>for efficiency</li>
   <li>write additional primitives</li>
 </ol>
+
+## Strength of R: What R can do ? ##
+<li>data handling and manipulation: numeric, textual and many matrix operations</li>
+<li>high-level data analytic and statistical functions</li>
+<li>simple to produce great graphics</li>
+<li>programming language: loops, branching,  subroutines</li>
+<li>it is free and it has a strong user-support </li>
+
+## Weaknesses of R ##
+<li>R is<strong> not a database</strong>, but it can be connected to DBMSs</li>
+<li>R is basically <strong>a command-line interface</strong> but some package like <strong>Rcmdr</strong> can provide nice graphical user interfaces.</li>
+<li>R is an <strong>interpreted language </strong>which can be very slow, but you can call own C/C++ code from R.</li>
+<li>R <strong> lacks many spreadsheet features, but R can input/output data from/to Excel</strong></li>
