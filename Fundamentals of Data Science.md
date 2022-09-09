@@ -147,8 +147,8 @@
 
 
 # Tutorial  R#
-
-## R is a statistical programming language and environment for data manipulation, calculation and graphical display.##
+### Obtaining R to a linke: https://cran.r-project.org/ ###
+## R is a statistical programming language and environment for data manipulation, calculation and graphical display. ##
 <li>many useful operators for arrays and matrices.</li>
 <li>many handy <strong>tools for interactive data analysis</strong>.</li>
 <li>great<strong> graphical facilities </strong>for data analysis.</li>
