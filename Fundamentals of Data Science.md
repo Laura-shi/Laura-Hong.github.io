@@ -238,6 +238,7 @@
   <li> head(mtcars, 2)</li>
   <li>tail(mtcars, 2)</li>
 </ol>
+
 ## Special characters in R ##
 <li># #user’s comment</li>
 <li><- #assignment statement (also allowed: 
@@ -289,7 +290,7 @@
   <li>from:to #   increment ±1.</li>
   <li>seq(from, to, by= gap) increment or length can be specified</li>
   <li>rep(d,n)  #   replicate d n times.</li>
-  #### for examples####
+ <p><strong>for examples<strong></p>
   <li>x <- 9:5; x <br>
 [1] 9 8 7 6 5</li>
   <li> y <- seq(0.9,0.5, -0.1); y<br>
@@ -298,3 +299,46 @@
 [1] 9 8 7 6 5 9 8 7 6 5</li>
   
   ## Logical comparisons in R ###
+   <p><strong>Comparing x and y (vector or scalar) with logical comparison, it will yield a vector of True/False.<strong></p>
+   <li>x<y, x<=y <br>
+ #x is less than, less or equal to, y</li>
+   <li> x>y, x>=y <br>
+ #x is greater than, greater or equal to, y</li>
+   <li>x == y, x!=y <br> 
+ # x  equal, not equal to, y</li>
+   <p><strong>We can use some logical operators for conditional expression:<strong></p>
+   <li>!, &, | , xor(x,y) <br> 
+# not, and, or, exclusive or</li>
+   <li>any()  <br>
+#   true if any of a vector is true</li>
+   <li>all()  <br>
+#   true if all values of a vector are true</li>
+     
+ ## Vectors and arrays ##
+  <li>vector is  the simplest data structure used in R which is created using c() function.</li>
+  <li>array is an ordered collection of data of the same type with an integer as its index.</li>
+  <ol>
+    <li>an array can have many dimensions.</li>
+    <li>matrix is simply a 2-dim array.</li>
+  </ol>
+   <p><strong>examples:</strong></p>
+   <li> x <- c(3, 5, 7, 11, 13, 19); x <br>
+[1]  3  5  7 11 13 19</li>
+   <li>y <- array(x, dim=c(2,3)); y <br>
+[,1] [,2] [,3]  <br>
+[1,]    3    7   13 <br>
+[2,]    5   11   19</li>
+  <li>dim(x) <- c(3,2); x <br>
+[,1] [,2]  <br>
+[1,]    3   11  <br>
+[2,]    5   13  <br>
+[3,]    7   19</li>
+     
+   ### <strong>List in R <strong> ###
+     <li>List in R is an object consisting of a  collection of objects (components) of (possibly) different types.</li>
+     <li>The entry of the list index is usually by some names as the key.</li>
+     <li>It can also referenced by its position with an integer.</li>
+     ![image](https://user-images.githubusercontent.com/60895448/189424951-a89c20c9-0f5e-40b0-98e4-874b995087d2.png)
+     
+
+  
