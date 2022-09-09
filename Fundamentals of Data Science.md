@@ -153,3 +153,13 @@
 <li>many handy <strong>tools for interactive data analysis</strong>.</li>
 <li>great<strong> graphical facilities </strong>for data analysis.</li>
 <li>a<strong> programming language</strong> with conditionals,loops,user defined functions and input and output facilities</li>
+
+## Features of R ##
+### R is an interpreted computer language.###
+<li>branching and looping as well as modular programming using functions.</li>
+<li>user-defined functions in R are usually written in R, calling upon a smaller set of internal primitives.</li>
+<li>allows user interface to procedures written in C, C++ or FORTRAN languages </li>
+<ol>
+  <li>for efficiency</li>
+  <li>write additional primitives</li>
+</ol>
