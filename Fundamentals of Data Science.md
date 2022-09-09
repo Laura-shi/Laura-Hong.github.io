@@ -432,6 +432,9 @@ it can be used to terminate any loop, possibly abnormally. </li>
 <li>next <br>
 it transfers execution to next iteration in loops <br>
 it can be used to discontinue one particular cycle and skip to the “next”.</li>
+
+     
+
 ![image](https://user-images.githubusercontent.com/60895448/189438071-c048cc62-dd0c-4dba-b55f-23aee83887e3.png)
 ![image](https://user-images.githubusercontent.com/60895448/189438329-db06e90c-f2ee-4e98-b16d-7c7d87ffb20f.png)
 ![image](https://user-images.githubusercontent.com/60895448/189438636-d0a46857-e08c-4714-a7d2-e8878a2b3d44.png)
@@ -443,6 +446,9 @@ it can be used to discontinue one particular cycle and skip to the “next”.</
 <li>write.table(x,file) # writes object x as a dataframe to a table</li>
 <li>read.table(file)# reads table from space-delimited file, aligned in columns</li>
 <li>read.csv(file),read.delim(file) # reads table comma- delimited or tab-delimited file</li>
+     
+     
+     
 ![image](https://user-images.githubusercontent.com/60895448/189439320-40bbbc38-762b-4ce8-9ad5-7dbffa9837f1.png)
  
 ## Importing and exporting data ## 
