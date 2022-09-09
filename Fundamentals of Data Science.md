@@ -145,3 +145,11 @@
 ![image](https://user-images.githubusercontent.com/60895448/189276777-548f0971-bf68-4722-800b-a3864ac40f9c.png)
 ![image](https://user-images.githubusercontent.com/60895448/189276799-2afc52ef-c9b9-443e-9a96-7770d77e30c4.png)
 
+
+# Tutorial  R#
+
+## R is a statistical programming language and environment for data manipulation, calculation and graphical display.##
+<li>many useful operators for arrays and matrices.</li>
+<li>many handy <strong>tools for interactive data analysis</strong>.</li>
+<li>great<strong> graphical facilities </strong>for data analysis.</li>
+<li>a<strong> programming language</strong> with conditionals,loops,user defined functions and input and output facilities</li>
