@@ -338,7 +338,9 @@
  <li>List in R is an object consisting of a  collection of objects (components) of (possibly) different types.</li>
  <li>The entry of the list index is usually by some names as the key.</li>
  <li>It can also referenced by its position with an integer.</li>
-![image](https://user-images.githubusercontent.com/60895448/189424951-a89c20c9-0f5e-40b0-98e4-874b995087d2.png)
+![image](https://user-images.githubusercontent.com/60895448/189426919-b850e374-1c75-4313-8401-dc8d0d79ec2c.png)
+![image](https://user-images.githubusercontent.com/60895448/189426955-b07e4ab7-b9e9-4ed4-b72c-dbc9d75aee67.png)
+
      
 
   
