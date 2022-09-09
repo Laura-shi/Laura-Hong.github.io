@@ -104,6 +104,44 @@
   
 </p>
 
-## How to start the MYSQL server ##
-### run command sudo/usr/local/mysql/support-files/mysql.server star<br> and then enter the password ###
+# Data Management#
+![image](https://user-images.githubusercontent.com/60895448/189275514-c019bf79-f052-4884-9edf-1737119dde32.png)
+
+## Pre-processing in Data Life Cycle##
+![image](https://user-images.githubusercontent.com/60895448/189275397-d7ae34c8-95df-4177-b55e-ff72328eadab.png)
+![image](https://user-images.githubusercontent.com/60895448/189275435-0eefef8a-0f8e-4d9f-872d-8354a6e02ac2.png)
+![image](https://user-images.githubusercontent.com/60895448/189275483-7ec2bb52-13e9-4560-99df-d03e8b40498d.png)
+![image](https://user-images.githubusercontent.com/60895448/189275599-60ffbd8f-6782-4fdf-8929-9ede2b4da82a.png)
+![image](https://user-images.githubusercontent.com/60895448/189275651-53a92f0b-6d8b-4e8b-aa2a-fcb903d392e0.png)
+![image](https://user-images.githubusercontent.com/60895448/189275692-a2cf8288-526b-4fee-963d-f0cd7cd0dea6.png)
+![image](https://user-images.githubusercontent.com/60895448/189275728-78278106-2bf9-4121-9822-28586f9c7823.png)
+![image](https://user-images.githubusercontent.com/60895448/189275774-8e83a363-635d-4a45-80d7-03b031f8ca97.png)
+![image](https://user-images.githubusercontent.com/60895448/189275889-e4a7bdef-135b-42f4-a488-4a2ca0b4b992.png)
+![image](https://user-images.githubusercontent.com/60895448/189275925-1daaf7d5-36dc-4445-9b71-6654f4e90ec5.png)
+![image](https://user-images.githubusercontent.com/60895448/189275954-76c4ba31-4f7d-422a-885c-cc32581b2f39.png)
+![image](https://user-images.githubusercontent.com/60895448/189275993-b7bad110-ff20-4bc1-b5e8-1b613ef1fd7a.png)
+![image](https://user-images.githubusercontent.com/60895448/189276015-8a75e8c0-6ee1-4b6b-896f-3f54195c3596.png)
+![image](https://user-images.githubusercontent.com/60895448/189276040-e2db9b95-66d4-40ee-8001-e94cf7f67f92.png)
+![image](https://user-images.githubusercontent.com/60895448/189276074-f0d5ae80-05fd-4ca4-9403-8757757c3aff.png)
+![image](https://user-images.githubusercontent.com/60895448/189276096-9ec3d9eb-62fa-4e28-9301-5ad921e4c8a4.png)
+![image](https://user-images.githubusercontent.com/60895448/189276119-bf332888-72b6-46b3-bf8c-3635aaf7b06a.png)
+![image](https://user-images.githubusercontent.com/60895448/189276134-5c972dd6-b396-4c82-b3ad-e8ae9a523bbe.png)
+![image](https://user-images.githubusercontent.com/60895448/189276165-b0426abd-2fde-4a65-9c55-2a63416e3e25.png)
+![image](https://user-images.githubusercontent.com/60895448/189276187-5d832ef8-b1fa-4d78-a0b0-b7fba58d7bc7.png)
+![image](https://user-images.githubusercontent.com/60895448/189276221-3b0f9760-4bae-495b-a226-dbeaad073adb.png)
+![image](https://user-images.githubusercontent.com/60895448/189276247-89547af0-e0c8-4e7c-80a2-03472b9acb74.png)
+![image](https://user-images.githubusercontent.com/60895448/189276275-751f159b-1eeb-4ac0-b35f-5b047bc952a1.png)
+![image](https://user-images.githubusercontent.com/60895448/189276342-19a38d82-ce52-493c-8443-aa6608409559.png)
+![image](https://user-images.githubusercontent.com/60895448/189276395-a1aeebd1-b546-4699-9dda-286fce11a4a3.png)
+![image](https://user-images.githubusercontent.com/60895448/189276422-e5059f5d-57ff-4db1-83d3-00be8ed3ed71.png)
+![image](https://user-images.githubusercontent.com/60895448/189276466-d5e7993d-c734-496a-a4ff-31d4f01aa455.png)
+![image](https://user-images.githubusercontent.com/60895448/189276503-2c7151c8-026f-49e1-8ef8-c3397e5b8ee2.png)
+![image](https://user-images.githubusercontent.com/60895448/189276550-1da4679d-825a-4e6d-b831-1f6e07059cbd.png)
+![image](https://user-images.githubusercontent.com/60895448/189276578-7143b3c1-05d8-45ac-82a7-4f14b8087e9d.png)
+![image](https://user-images.githubusercontent.com/60895448/189276617-81f21c63-8c39-4c48-bde8-98ff583dfc74.png)
+![image](https://user-images.githubusercontent.com/60895448/189276667-becf8dfe-c810-4083-8396-13176f5c798b.png)
+![image](https://user-images.githubusercontent.com/60895448/189276702-0f36aa48-1bb9-4a65-be82-d55bbcbfa5ff.png)
+![image](https://user-images.githubusercontent.com/60895448/189276730-47683d90-949c-4de7-9699-f51cbae10ead.png)
+![image](https://user-images.githubusercontent.com/60895448/189276777-548f0971-bf68-4722-800b-a3864ac40f9c.png)
+![image](https://user-images.githubusercontent.com/60895448/189276799-2afc52ef-c9b9-443e-9a96-7770d77e30c4.png)
 
