@@ -176,3 +176,125 @@
 <li>R is basically <strong>a command-line interface</strong> but some package like <strong>Rcmdr</strong> can provide nice graphical user interfaces.</li>
 <li>R is an <strong>interpreted language </strong>which can be very slow, but you can call own C/C++ code from R.</li>
 <li>R <strong> lacks many spreadsheet features, but R can input/output data from/to Excel</strong></li>
+
+## Data Analysis and Presentation ##
+<li>The R distribution contains functionality for large number of statistical procedures.</li>
+<ol>
+  <li>linear and generalized linear models</li>
+  <li>nonlinear regression models</li>
+  <li>time series analysis</li>
+  <li>classical parametric and nonparametric tests</li>
+  <li>clustering</li>
+  <li>smoothing</li>
+</ol>
+<li>R also has a large set of functions which provide a flexible graphical environment for creating various kinds of data presentations.</li>
+
+## Documentation and help file in R ##
+<p>All the R functions have been documented in the form of help pages in an “output independent” form which can be used to create versions for HTML, LATEX, text etc.</p>
+<li>The document “An Introduction to R” provides a more user-friendly starting point.</li>
+<li>An “R Language Definition” manual</li>
+<li>More specialized manuals on data import/export and extending R.</li>
+
+## Standard packages in R ## 
+<li>Classical and modern statistical techniques have been implemented.</li>
+<li>There are several packages supplied with R (called “standard” packages) and many areavailable through internet sites (such as http://cran.r-project.org)</li>
+<li>install.packages()lists packages available to install over the internet</li>
+
+## example of some command of R ##
+<li>? t.test or help(t.test): Getting help</li>
+<li>q() – quits R, you will be asked whether to save workspace created</li>
+<li>getwd() – displays current working directory<br>getwd()
+[1] "C:/Documents and Settings/LYD/My Documents"</li>
+<li>setwd("PATH") – sets the working directory to PATH. Useful to work on different projects.<br>setwd(“C:/class/7150-2011/hw1") </li>
+<li>ls() – lists all objects currently in the workspace</li>
+<li>rm() – removes the object specified.</li>
+![image](https://user-images.githubusercontent.com/60895448/189287540-72d0065e-60a5-4ce5-8b23-9a2c25707048.png)
+
+<li>save(x, file=“x.Rdata”)</li>
+<li>load(“x.Rdata”)</li>
+
+
+## store data ##
+<li>Every R object can be stored into and restored from a file with the commands “save” and “load”.</li>
+<li>This uses the XDR (external data representation) standard of Sun Microsystems and others, and is portable between MS-Windows, Unix, Mac.</li>
+
+## Command History ## 
+<li>You can save all the commands executed in R by saving your command history</li>
+<li>Click File, then click “Save History...”</li>
+<li>Choose directory where you want to save then click OK.</li>
+<li>Command history is saved in a “.RHistory” file</li>
+<li>history() lists last 25 commands</li>
+<li>history(max.show=Inf) lists all commands</li>
+<li></li>
+
+## Built-in dataset in R ##
+<li>R has many built-in datasets that you do not have to create by yourself.</li>
+<li>For example, R has dataset, called mtcars, from 1974 Motor Trend US magazine, for fuel consumption (mpg) and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models). </li>
+<li>To see the list and description of the built-in datasets, type data()</li>
+
+## Partial listing of a dataset  ##
+<li>you can use head(d,n), tail(d,n), print(d) (or simply d) to display the first n, bottom n and all (if not too many) of the dataset d.</li>
+<ol>
+  <li> head(mtcars, 2)</li>
+  <li>tail(mtcars, 2)</li>
+</ol>
+## Special characters in R ##
+<li># #user’s comment</li>
+<li><- #assignment statement (also allowed: 
+=    ->     <<- ->>        )<br>we will use only <- for assignment.</li>
+  <li>[] # indexing of arrays, matrices, dataframes, lists</li>
+  <li>() # encloses function input variables/arguments</li>
+  <li>{} # groups statements (e.g. loops, functions, defs</li>
+  <li>; # separates several statements on a single line</li>
+  <li>$ # extracting elements from lists or data frames<br>
+“$” is similar to “.” in other languages like C/C++/Java.</li>
+  
+  ## Variable names ## 
+  <li>Like many modern languages (C, C++, Java), the variable names are case-sensitive.</li>
+  <li>While R does not have a concept of “reserved words”, several variable/function names are better treated as of “reserved words” manly for the purpose of readability.</li>
+  <ol>
+    <li>e.g. one-letter “reserved words”: c, q, t, C, D, F, I, and T.</li>
+    <li>c (concatenate), q(quit),t(transpose of matrix), F(false), T(true), D(derivative), ...</li>
+  </ol>
+  
+  ## Basic data types in R ## 
+  ### Primitive (or: atomic) data types in R are: ###
+  <li>numeric    (integer, double, complex)</li>
+  <li>character</li>
+  <li>logical</li>
+  <li>function</li>
+  <p>We can build vectors, arrays, lists from basic data types.The primary data type in R is vector.</p>
+  
+  ## Useful functions on strings ##
+  <li>paste() # concatenates and converts to string</li>
+  <li>substr(), strsplit() # substrings and splitting strings</li>
+  <li>grep(), gsub()   # finds matches, replaces matches in a string</li>
+  <li>tolower(), toupper() # uppercase, lowercase conversion</li>
+  <li>nchar() # number of characters in string</li>
+  
+  ## Missing values and NaNs ## 
+  ### R has some special values ### 
+  <li>NA represents a missing value in the dataset </li>
+  <li>NaN (not a number) because of the mathematical operations  such as 0/0. </li>
+  <li>Inf (positive infinity)  e.g. 1/0</li>
+  <li>-Inf (negative infinity)  e.g. log(0)</li>
+  <li>NULL is an   empty vector or array.</li>
+  ### We can check them by ###
+  <li>is.infinite(x)</li>
+  <li>is.nan(x)</li>
+  <li>is.na(x)</li>
+  
+  ## Sequence generation in R ##
+  ### Common ways to generate a sequence: ###
+  <li>from:to #   increment ±1.</li>
+  <li>seq(from, to, by= gap) increment or length can be specified</li>
+  <li>rep(d,n)  #   replicate d n times.</li>
+  #### for examples####
+  <li>x <- 9:5; x <br>
+[1] 9 8 7 6 5</li>
+  <li> y <- seq(0.9,0.5, -0.1); y<br>
+[1] 0.9 0.8 0.7 0.6 0.5</li>
+   <li>z <- rep(x, 2); z<br>
+[1] 9 8 7 6 5 9 8 7 6 5</li>
+  
+  ## Logical comparisons in R ###
