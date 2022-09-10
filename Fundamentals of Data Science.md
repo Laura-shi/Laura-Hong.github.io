@@ -466,5 +466,6 @@ also: read.table, read.csv</li>
 ## 如何把excel数据导入 ##
 <li>先用setwd("这里填数据存放的路径，注意：要用‘/’而不是‘\’")</li>
 <li><read.csv("wine.csv")读取即可/li>
+
 ![image](https://user-images.githubusercontent.com/60895448/189473165-b4551bea-5895-48d1-bff9-fc03b4d29ffe.png)
 
