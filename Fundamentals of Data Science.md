@@ -461,3 +461,10 @@ also: read.table, read.csv</li>
 <li>ype conversions: by default, the read functions try to guess and autoconvert the data types of the different columns (e.g. number, factor, character). </li>
 <li>There are options as.is and colClasses to control this – read the online help</li>
 <li>Understand the conventions your input files use and set the quote options accordingly.</li>
+
+     
+## 如何把excel数据导入 ##
+<li>先用setwd("这里填数据存放的路径，注意：要用‘/’而不是‘\’")</li>
+<li><read.csv("wine.csv")读取即可/li>
+![image](https://user-images.githubusercontent.com/60895448/189473165-b4551bea-5895-48d1-bff9-fc03b4d29ffe.png)
+
