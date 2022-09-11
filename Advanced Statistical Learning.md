@@ -1,3 +1,5 @@
+<p>some background  knowledge  of statistical, please visit: https://zh.m.wikipedia.org/zh-hans/%E6%96%B9%E5%B7%AE </p>
+
 # Advanced Statistical Learning I #
 ## chapter 2 Assessing Model Accuracy ##
 ### 2.1.1 What is Statistical Learning? ###
