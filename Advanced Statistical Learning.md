@@ -1,5 +1,6 @@
 # Advanced Statistical Learning I #
 ## chapter 2 Assessing Model Accuracy ##
+### 2.1.1 What is Statistical Learning? ###
 <img width="826" alt="image" src="https://user-images.githubusercontent.com/60895448/188942194-3f04cb38-eaa3-4be5-a643-94f5e1bea757.png">
 <img width="913" alt="image" src="https://user-images.githubusercontent.com/60895448/188942270-ed4db334-9487-4e2a-a6b6-3cf1e125c540.png">
 <img width="911" alt="image" src="https://user-images.githubusercontent.com/60895448/188942347-5495607d-5e7a-4f10-9a18-25eecb469932.png">
@@ -8,6 +9,29 @@
 <img width="763" alt="image" src="https://user-images.githubusercontent.com/60895448/188942871-3ca8d160-d7ce-4731-b117-6efdf81e57fd.png">
 <img width="864" alt="image" src="https://user-images.githubusercontent.com/60895448/188943597-b8a51db1-a004-4bf2-b4d8-0bd842e9e697.png">
 <img width="889" alt="image" src="https://user-images.githubusercontent.com/60895448/188943695-bf6c44e0-3135-494f-8654-80e6aa2a56cc.png">
+<img width="922" alt="image" src="https://user-images.githubusercontent.com/60895448/189547382-94fc250e-3ba7-4f7a-8a1e-73f451778fce.png">
+<img width="907" alt="image" src="https://user-images.githubusercontent.com/60895448/189547401-89e1ecdd-badd-42a3-8e63-63ae7b8051cf.png">
+<img width="839" alt="image" src="https://user-images.githubusercontent.com/60895448/189547955-b15b136e-f7d5-4324-9c6a-49b518bae83e.png">
+<img width="917" alt="image" src="https://user-images.githubusercontent.com/60895448/189547984-6523f9c8-5493-4e12-a9cb-6e6198cec1ab.png">
+
+### Non-parametric Methods ###
+<p>Non-parametric methods do not make explicit assumptions about the functional form of f. Instead they seek an estimate of fthat gets as close to the data points as possible without being too rough or wiggly.</p>
+<li>•A major advantage over parametric approaches: by avoiding the assumption of a particular functional form for f, they have the potential to accurately fit a wider range of possible shapes for f.</li>
+<li>•A major disadvantage: since they do not reduce the problem of estimating fto a small number of parameters, a very large number of observations (far more than is typically needed for a parametric approach) is required in order to obtain an accurate estimate for f.</li>
+<img width="910" alt="image" src="https://user-images.githubusercontent.com/60895448/189548139-bd504342-f040-4867-9284-7efb7317342c.png">
+
+### 2.1.4 Supervised Versus Unsupervised Learning
+<img width="882" alt="image" src="https://user-images.githubusercontent.com/60895448/189548808-6bcf5dbc-6117-4bde-9ab7-6fd94140262f.png">
+<img width="914" alt="image" src="https://user-images.githubusercontent.com/60895448/189549294-0e2f99cf-a973-426d-b8ea-9d7d1179ec14.png">
+
+<p>Example: We are interested in predicting whether an individual will default on his or her credit card payment, on the basis of annual income and monthly
+credit card balance.</p>
+<img width="918" alt="image" src="https://user-images.githubusercontent.com/60895448/189549557-3c1be7c2-4379-43d1-9ace-53026ac64b8f.png">
+<p>Example: We consider 6,830 gene expression measurements for each of 64 cancer cell lines. We are interested in determining whether there are groups,
+or clusters, among the cell lines based on their gene expression measurements.</p>
+<img width="918" alt="image" src="https://user-images.githubusercontent.com/60895448/189549608-15d4a627-f9fb-4a5a-8d66-762fcd257c1c.png">
+<img width="909" alt="image" src="https://user-images.githubusercontent.com/60895448/189549888-3376cf2a-fba8-4919-98c7-5029750c4d32.png">
+<img width="918" alt="image" src="https://user-images.githubusercontent.com/60895448/189549901-a7a04e8a-e876-4041-925d-e40d52cdf11c.png">
 
 
 
