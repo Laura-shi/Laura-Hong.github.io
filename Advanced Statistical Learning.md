@@ -78,6 +78,22 @@ or clusters, among the cell lines based on their gene expression measurements.</
 <p>Where the expectation averages the probability over all possible values of X.<br> The Bayes error rate is analogous to the irreducible error, discussed earlier.</p>
 
 
+### K-Nearest Neighbors ###
+<img width="870" alt="image" src="https://user-images.githubusercontent.com/60895448/189567883-bd9c0fd3-a585-459c-8839-d187576129b5.png">
+<img width="920" alt="image" src="https://user-images.githubusercontent.com/60895448/189567968-74260e74-901b-42be-9d43-0eed319e9069.png">
+<img width="849" alt="image" src="https://user-images.githubusercontent.com/60895448/189568139-4661ba43-4f64-4d32-b1d8-c22d82ebdcf0.png">
+<img width="721" alt="image" src="https://user-images.githubusercontent.com/60895448/189568185-912a2490-8047-476f-bf19-9b0566467ec1.png">
+<img width="806" alt="image" src="https://user-images.githubusercontent.com/60895448/189568353-bf72e3c6-604e-434b-983d-aa67f5c34a03.png">
+<img width="843" alt="image" src="https://user-images.githubusercontent.com/60895448/189568609-0415ae03-aa0c-48fb-b5a5-cde011ec7db3.png">
+<img width="823" alt="image" src="https://user-images.githubusercontent.com/60895448/189568660-39fc2803-0098-4103-a511-acd7333a5a06.png">
+<img width="837" alt="image" src="https://user-images.githubusercontent.com/60895448/189568718-b4109b70-12ea-45f3-ade1-9536a20c0058.png">
+<img width="909" alt="image" src="https://user-images.githubusercontent.com/60895448/189569657-d1022156-151d-412c-9b1c-e9a87a97a3f3.png">
+<img width="851" alt="image" src="https://user-images.githubusercontent.com/60895448/189569679-37cc5beb-c810-45da-8f0b-f42ec726f644.png">
+<img width="920" alt="image" src="https://user-images.githubusercontent.com/60895448/189569754-649f462c-f548-4fb3-8a26-444976a9fe5a.png">
+<img width="740" alt="image" src="https://user-images.githubusercontent.com/60895448/189569796-f08101d3-465e-4f4f-8974-77073bd066c8.png">
+<img width="808" alt="image" src="https://user-images.githubusercontent.com/60895448/189569828-f2dcb99a-d890-4f4b-a234-d49c67841dad.png">
+<img width="757" alt="image" src="https://user-images.githubusercontent.com/60895448/189569844-caf6797a-c384-4ba8-9f2b-4b2d1d0d1304.png">
+
 
 
 # Advanced Statistical Learning II #
