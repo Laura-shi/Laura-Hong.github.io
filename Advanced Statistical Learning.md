@@ -104,6 +104,11 @@ or clusters, among the cell lines based on their gene expression measurements.</
 ![image](https://user-images.githubusercontent.com/60895448/190083048-8899df55-e96f-40cb-8ec9-bba3e10ef25e.png)
 ![image](https://user-images.githubusercontent.com/60895448/190083106-5860ba9e-953e-4273-b42e-a8a40fae3404.png)
 
+![image](https://user-images.githubusercontent.com/60895448/190084523-17f4ac2f-11cb-4950-a6a3-3258c58ccad4.png)
+![image](https://user-images.githubusercontent.com/60895448/190085186-08ff65b4-22d4-4cd5-897e-30d5f812b78c.png)
+![image](https://user-images.githubusercontent.com/60895448/190085641-952954d2-da37-4f7a-a27e-6f5dcbee7206.png)
+![image](https://user-images.githubusercontent.com/60895448/190085892-4dec4b4a-d1dc-48e3-9af6-a00cc5a4d27a.png)
+
 
 
 
