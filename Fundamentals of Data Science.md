@@ -477,7 +477,8 @@ also: read.table, read.csv</li>
   
 ### Binomial  Distribution  ###
   
-<img width="960" alt="image" src="https://user-images.githubusercontent.com/60895448/190529164-de4f5cce-4f02-4997-a3fb-a10d7532aefd.png">
+<img width="1001" alt="image" src="https://user-images.githubusercontent.com/60895448/190529273-eb2cfbda-9169-4ce4-b778-3e8bc2897a70.png">
+
 
 
 
