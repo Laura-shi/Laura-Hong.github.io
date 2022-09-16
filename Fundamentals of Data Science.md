@@ -510,5 +510,6 @@ also: read.table, read.csv</li>
 
 <img width="874" alt="image" src="https://user-images.githubusercontent.com/60895448/190533428-d461c360-d879-4291-8b8f-811325ae8c66.png">
 
+<img width="630" alt="image" src="https://user-images.githubusercontent.com/60895448/190533499-45ac4203-4cb9-4e94-80a7-fce9070e5bc7.png">
 
 
