@@ -479,6 +479,13 @@ also: read.table, read.csv</li>
   
 <img width="1001" alt="image" src="https://user-images.githubusercontent.com/60895448/190529273-eb2cfbda-9169-4ce4-b778-3e8bc2897a70.png">
 
+## Computing probabilities in R ##
+<img width="943" alt="image" src="https://user-images.githubusercontent.com/60895448/190529495-62dc7e70-1383-42de-9efa-5f17a313328e.png">
+
+<img width="897" alt="image" src="https://user-images.githubusercontent.com/60895448/190529577-4e82cbab-eef0-47ff-9747-f618acabf7fa.png">
+  
+<img width="859" alt="image" src="https://user-images.githubusercontent.com/60895448/190529663-ba2534fd-810d-48bc-a93d-6ee6d5040bf7.png">
+
 
 
 
