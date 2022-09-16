@@ -468,4 +468,16 @@ also: read.table, read.csv</li>
 <li><read.csv("wine.csv")读取即可/li>
 
 ![image](https://user-images.githubusercontent.com/60895448/189473165-b4551bea-5895-48d1-bff9-fc03b4d29ffe.png)
+  
+
+## StartProbModel  ##
+### gerneral properties of the Discrete ###
+  
+<img width="939" alt="image" src="https://user-images.githubusercontent.com/60895448/190528975-d403f135-6075-456a-92b2-3f62fabcbfbe.png">
+  
+### Binomial  Distribution  ###
+  
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/60895448/190529164-de4f5cce-4f02-4997-a3fb-a10d7532aefd.png">
+
+
 
