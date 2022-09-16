@@ -496,5 +496,19 @@ also: read.table, read.csv</li>
 
 <img width="773" alt="image" src="https://user-images.githubusercontent.com/60895448/190530894-3a048ce5-aa73-44a6-8c15-76088c0f030b.png">
 
+<img width="889" alt="image" src="https://user-images.githubusercontent.com/60895448/190531842-b26cc85c-1874-439e-b970-9d08bb58fc88.png">
+
+<img width="821" alt="image" src="https://user-images.githubusercontent.com/60895448/190532266-d58a7c42-4e11-441f-ab42-f3eb064dce41.png">
+
+<img width="931" alt="image" src="https://user-images.githubusercontent.com/60895448/190533050-79a5e0d1-2b67-46c5-ab87-3b2eb967e442.png">
+
+<img width="955" alt="image" src="https://user-images.githubusercontent.com/60895448/190533198-1a0f579a-ec08-4543-a75f-cf90ac5c5588.png">
+
+<img width="840" alt="image" src="https://user-images.githubusercontent.com/60895448/190533254-683650c8-e848-4d92-b478-2f7a3d795e0e.png">
+
+<img width="841" alt="image" src="https://user-images.githubusercontent.com/60895448/190533308-a6393ed1-6419-4c40-9d84-9845f08cef19.png">
+
+<img width="874" alt="image" src="https://user-images.githubusercontent.com/60895448/190533428-d461c360-d879-4291-8b8f-811325ae8c66.png">
+
 
 
