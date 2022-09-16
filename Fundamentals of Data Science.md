@@ -486,6 +486,15 @@ also: read.table, read.csv</li>
   
 <img width="859" alt="image" src="https://user-images.githubusercontent.com/60895448/190529663-ba2534fd-810d-48bc-a93d-6ee6d5040bf7.png">
 
+<img width="918" alt="image" src="https://user-images.githubusercontent.com/60895448/190529890-622d16d3-4a09-4010-a6af-53124b893cea.png">
+
+<img width="879" alt="image" src="https://user-images.githubusercontent.com/60895448/190530196-67284624-50e5-49a6-885d-f021867dfcb7.png">
+
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/60895448/190530309-07017116-f177-4093-9b75-5df21c5e62da.png">
+
+<img width="885" alt="image" src="https://user-images.githubusercontent.com/60895448/190530662-c19f8a25-b27e-4889-a7ff-7bcfe05f1796.png">
+
+<img width="773" alt="image" src="https://user-images.githubusercontent.com/60895448/190530894-3a048ce5-aa73-44a6-8c15-76088c0f030b.png">
 
 
 
