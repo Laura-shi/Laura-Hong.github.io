@@ -205,3 +205,73 @@ searches, average time on site</p>
 <li>email marketing</li>
 <li>Track & measure from social media, email marketing, Google Console and Google Analytics</li>
 
+# How to setup your website #
+<li>Purchasing and Registering your domain name <li>
+<li>Registering and Hosting</li>
+<ol>
+  <li>Select domain name free</li>
+  <li>Purchase domain name $$ </li>
+  <li>Purchase folder space asa Hosting $$$</li>
+</ol>
+
+## Who registers the domain name ##
+<li>All domain names are maintained by <strong>ICANN</strong> (The Internet Corporation for Assigned Names and Numbers)</li>
+<li><strong>ICANN </strong>then has authorized “resellers” who sell available domain names</li>
+<li>Some of the very popular resellers are<br>
+• DREAMHOST<br>
+• BLUEHOST<br>
+• And 1000’s more...
+</li>
+
+## Resellers like Dreamhost.com ##
+<li>Resellers like Dreamhost are also in the business of selling “server space” for storing your website files in the cloud</li>
+<li>Resellers (hosting companies) perform the following 3 
+services for you that we are interested in:
+<ol>
+  <li>You can purchase the domain name from them</li>
+  <li>You can purchase hosting space from them</li>
+  <li>You can install WordPress directly from their site for free wit One-Click Install</li>
+</ol>
+</li>
+
+## Building your website ##
+<li>We will use WordPress to build our websites.</li>
+<li>WordPress is a CMS (content management system)</li>
+<li>It has its own database and manages all your website files.</li>
+<li>WordPress is a very popular website building software.</li>
+<li>It requires no programing skills to update and maintain</li>
+<li>It provides structure, functionality and standards</li>
+<li>It retains about 35% of market share for building websites</li>
+
+## About WordPress ##
+<li>There are two different versions of WordPress installations.</li>
+<li>WordPress.com (a web services company that packages WordPress for you) and WordPress.org (the open source community)</li>
+<li>WordPress.com is basically a website hosting company where you can create a free account and create your own site or blog. It is a bit restricted in what it allows you to do.</li>
+<li>WordPress.org is an open source site that maintains the main code of WordPress. It has a lot of advantages. </li>
+<li>your “hosting company” (not Wordpress.com – avoid this) will grab the OPEN-SOURCE code and install for you with One-Click Install. This is the one I REQUIRE you to use.</li>
+
+### WordPress.org ###
+<li>WordPress is the application which is maintained and supported by <br>
+WordPress.org (a community site)</li>
+<li>We will work with the FULL SOURCE CODE with free crowd support from Wordpress.org </li>
+<li>We will use DREAMHOST.COM hosting company (if I am hosting for you) to get the code for us</li>
+<li>AVOID - Wordpress.com because it limits your control with Google Analytics and gives you limited accessibility to themes and plugins. DO NOT USE.</li>
+
+## Secure websites - http vs https ##
+<li>Google has moved towards https </li>
+<li>Encrypted transfer of information</li>
+<li>May have small ranking advantage</li>
+<li>All secure sites can be secured for free by the hosting company </li>
+<li>STEPS FOR WORDPRESS SITE <br>
+• Activate FREE SSL certificate option from hosting provider  <br>
+• Add SSL plugin within WordPress (you will do this)</li>
+
+## Select Free SSL certificate ##
+<li>Select Free SSL certificate</li>
+<ol>
+  <li>https://   vs. http://</li>
+  <li>Good to get https:// if you are an e-commerce site</li>
+  <li>Not all hosting providers provide free SSL certificates</li>
+  <li>FULLY HOSTED STEP COMPLETE; WORDPRESS INSTALL COMPLETE</li>
+  <li>Dreamhost offers these options</li>
+</ol>
