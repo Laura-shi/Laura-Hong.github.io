@@ -148,5 +148,14 @@ connect to web site, link building (attracting traffic from other sites)</li>
 ### Watch how to build a measurement plan: https://www.youtube.com/watch?v=OB9R2StdGLE&feature=youtu.be ###
 ### APA References format: https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/reference_list_basic_rules.html ###
 
+## 7 Steps to get traffic for your business ##
+<li>Step 1: Know Yourself (Uniqueness) and Know Your 
+Industry/Available Market/Competitors</li>
+<li>Step 2: Perform Strategic Analysis - SWOT</li>
+<li>Step 3:Set Objectives/ Achievable Goals/ KPI for measurement</li>
+<li>Step 4:Generate Strategies and Tactics for Achieving Objectives/ goals</li>
+<li>Step 5:Evaluate Strategies</li>
+<li>Step 6: Implement the strategy.</li>
+<li>Step 7: Track KPI’s, Analyze results, and Make improvements</li>
 
 
