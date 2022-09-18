@@ -110,6 +110,18 @@ or clusters, among the cell lines based on their gene expression measurements.</
 ![image](https://user-images.githubusercontent.com/60895448/190085892-4dec4b4a-d1dc-48e3-9af6-a00cc5a4d27a.png)
 
 
+<img width="665" alt="image" src="https://user-images.githubusercontent.com/60895448/190885195-88ab2203-dbc5-4124-bca2-4851bcce1b2b.png">
+<img width="685" alt="image" src="https://user-images.githubusercontent.com/60895448/190885207-ded73b36-a025-4d57-ac70-0897f117b195.png">
+<img width="622" alt="image" src="https://user-images.githubusercontent.com/60895448/190885219-9735d74f-7c59-466f-b7c1-054391273cf4.png">
+<img width="672" alt="image" src="https://user-images.githubusercontent.com/60895448/190885235-96fc2ba0-634e-42b9-9c68-0f8b28451250.png">
+<img width="584" alt="image" src="https://user-images.githubusercontent.com/60895448/190885252-5ae9289b-1191-4528-86b2-92191c1d919c.png">
+
+<img width="632" alt="image" src="https://user-images.githubusercontent.com/60895448/190885261-518b3a21-c168-44c8-90f5-4d2ae8edbb5d.png">
+
+<img width="654" alt="image" src="https://user-images.githubusercontent.com/60895448/190885273-668f10e7-81da-4b36-9c8f-c42efdbfc0c7.png">
+<img width="625" alt="image" src="https://user-images.githubusercontent.com/60895448/190885281-e789810c-7dd2-4e63-b553-5c26444b45de.png">
+<img width="615" alt="image" src="https://user-images.githubusercontent.com/60895448/190885293-54a53db0-c342-4553-8d79-6cfdebd8ac67.png">
+<img width="670" alt="image" src="https://user-images.githubusercontent.com/60895448/190885305-b90804f4-b572-41b9-bec9-2e170cc95d76.png">
 
 
 # Advanced Statistical Learning II #
