@@ -1,3 +1,4 @@
+# 统计的一些基本概念回顾 #
 <p>
 Some background  knowledge  of statistical, please visit: https://zh.m.wikipedia.org/zh-hans/%E6%96%B9%E5%B7%AE <br>
 The differents between Variance and Bais-variance, please visit: https://zhuanlan.zhihu.com/p/38853908  <br>
@@ -6,6 +7,12 @@ The differents between Variance and Bais-variance, please visit: https://zhuanla
 <li><strong>噪声的存在是学习算法所无法解决的问题，数据的质量决定了学习的上限。假设在数据已经给定的情况下，此时上限已定，我们要做的就是尽可能的接近这个上限。</strong></li>
 </p>
 <img width="646" alt="image" src="https://user-images.githubusercontent.com/60895448/189555130-fb94e8d4-1a86-47b1-bb8a-5f3bf5c4f6d1.png">
+## Z 分数 ## 
+<img width="540" alt="image" src="https://user-images.githubusercontent.com/60895448/190917564-55063f83-50c3-4937-9029-0da91828696d.png">
+<img width="823" alt="image" src="https://user-images.githubusercontent.com/60895448/190917592-86ff5182-abaf-46fd-a3cd-d5337f0472b3.png">
+<p>Z 分数没有具体的单位，它被称为标准分数。</p>
+
+
 
 
 # Advanced Statistical Learning I #
