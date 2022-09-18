@@ -158,4 +158,50 @@ Industry/Available Market/Competitors</li>
 <li>Step 6: Implement the strategy.</li>
 <li>Step 7: Track KPI’s, Analyze results, and Make improvements</li>
 
+## Define your key success measures for web analytics and traffic ##
+<li>Define your goals and metrics – what will you measure that identifies success for your objective</li>
+<li>What gets measured gets managed</li>
+<li>Visitors</li>
+<li>Return on investment</li>
+<li>Budget</li>
+<li>Ramp up time</li>
+
+## KPI’s – Key Performance Indicators ##
+<p>Increase brand awareness<br>
+• KPI – increase social shares, increase direct traffic, navigational 
+searches, average time on site</p>
+<p>Generate sales lead <br>
+• KPI – landing page conversions, Time on page, Goal conversion rate</p>
+<p>Getting people to read specific articles <br>
+• KPI – specific landing page visits, average time on page, downloads</p>
+
+## SMART objectives ##
+<li>Specific –be sufficiently detailed to measure real-world problems and opportunities</li>
+<li>Measurable – create a metric</li>
+<li>Actionable – make sure the information can be used to improve performance </li>
+<li>Relevant – make sure information can be applied to your business and to a specific goal</li>
+<li>Time-bound –set for realistic time period to review</li>
+
+## Plan your social media strategy ## 
+<p>• Facebook (Instgram,Twitter are the same strategy, the post frequately may a little different)
+<li>We will build dedicated facebook page</li>
+<li>post 1X daily</li>
+<li>Metrics – e.g goal is to reach X # of likes and grow community– generate X numbers of visitors to site</li>
+</p>
+
+
+## Key reminders ##
+<li>Know your industry – is there room for you?</li>
+<li>Identify your competitors – do a web SWOT analysis – include in Assignment 1</li>
+<li>Best to use a .com for your project for increasing traffic organically</li>
+<li>Your domain name (URL) should be identifiable with your business especially if you are a new business.</li>
+
+## Your marketing strategy – include these ##
+<li>A good domain name choice</li>
+<li>Target audience</li>
+<li>Differentiators</li>
+<li>social media – Facebook, Twitter</li>
+<li>search engine paid marketing - Google Adwords</li>
+<li>email marketing</li>
+<li>Track & measure from social media, email marketing, Google Console and Google Analytics</li>
 
