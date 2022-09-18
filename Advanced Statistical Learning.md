@@ -15,7 +15,7 @@ The differents between Variance and Bais-variance, please visit: https://zhuanla
 <img width="757" alt="image" src="https://user-images.githubusercontent.com/60895448/190918092-1d09c4a3-c2d9-4721-8c1f-78a7c20d7530.png">
 <img width="791" alt="image" src="https://user-images.githubusercontent.com/60895448/190918110-e9ca215c-8404-4290-8355-5428c94ad8ba.png">
 <img width="765" alt="image" src="https://user-images.githubusercontent.com/60895448/190918179-82999c66-b5d0-46cc-acd0-9afcab6d3693.png">
-<p>正态分布交互演示网址：https://homepage.divms.uiowa.edu/~mbognar/applets/normal.html <br>/p>
+<p>正态分布交互演示网址：https://homepage.divms.uiowa.edu/~mbognar/applets/normal.html <br></p>
 <img width="773" alt="image" src="https://user-images.githubusercontent.com/60895448/190919928-fc2d0af3-5546-40db-be6e-59596fd40233.png">
 
 
