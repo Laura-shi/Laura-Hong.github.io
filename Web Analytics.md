@@ -146,6 +146,7 @@ connect to web site, link building (attracting traffic from other sites)</li>
 
 
 ### Watch how to build a measurement plan: https://www.youtube.com/watch?v=OB9R2StdGLE&feature=youtu.be ###
+### APA References format: https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/reference_list_basic_rules.html ###
 
 
 
