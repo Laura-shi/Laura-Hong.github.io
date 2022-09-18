@@ -62,6 +62,90 @@ Getting the right audience is critical to foster engagement and conversions</li>
 
 <img width="1002" alt="image" src="https://user-images.githubusercontent.com/60895448/190924529-57e7af62-45b1-4639-a00e-5238a27ef4e0.png">
 
+## Business plan vs Marketing plan ## 
+<li>A business plan covers the entire business, including overall strategy, financial plans, target markets, sales, products and services, operations, and how they all relate to each other.</li>
+<li>A digital marketing plan, in contrast, focuses on the digital marketing strategy, defining & targeting the right audience to bring to your website, web content messaging, etc. The focus is to increase web traffic to your business and create conversions – to perform an activity you want them to do on your website.</li>
+
+## Develop a Strategic Marketing Position / Define your Difference ##
+### Internet Properties###
+<li>Mediating technology</li>
+<li>Global</li>
+<li>Real Time</li>
+<li>Area of reach</li>
+<li>Distribution channel</li>
+<li>Low barriers to entry</li>
+<li>comsumers empowered</li>
+<li>Low user search costs</li>
+<li>Inovation deriven</li>
+<li>Equalizer of firm size</li>
+
+### Internet Consumer Relationships ###
+<li>Commerce</li>
+<li>Content</li>
+<li>Customization</li>
+<li>Community</li>
+<li>Communication</li>
+
+### Environments ###
+<li>Technological</li>
+<li>National-Consumer-Firm</li>
+<li>Consumer</li>
+<li>Political</li>
+<li>Social</li>
+<li>Competitive</li>
+
+### Tools Mix ###
+<li>Digitalization</li>
+<li>Product & Distribution</li>
+<li>Social Media</li>
+<li>SEO</li>
+<li>Website Abilities</li>
+<li>Multimedia approaches</li>
+<li>Email</li>
+
+<img width="975" alt="image" src="https://user-images.githubusercontent.com/60895448/190925201-0f977f2b-084f-486b-887a-979ec8a2e941.png">
+
+## Product ##
+<p>
+<li>Traditional</li>
+  <ol>
+    <li>Available in pre-determined supply</li>
+    <li>Distribution channels</li>
+  </ol>
+<li>Digital Strategy</li>
+<ol>
+  <li>Immediate availability</li>
+  <li>Instant internet ordering, mail distribution</li>
+  <li>Allows products with limited appeal to find markets</li>
+</ol>
+</p>
+
+## Types of businesses & SEO <br> Who are you?##
+<li>B2B</li>
+<li>B2C</li>
+<li>Large corporation</li>
+<li>Small firm</li>
+<li>Very small firm</li>
+<li>Brick and Mortar</li>
+<li>Non-profit</li>
+
+
 
 ## How to Do SWOT Analysis for Your Website ##
 <p>please visit: https://www.intechnic.com/blog/how-to-perform-a-swot-analysis-for-your-website/ <br></p>
+
+## Strategies for your business ##
+<li>Digital Presence: Content Marketing – a media-rich self-hosted WordPress site to establish digital presence and blog. (note – you may use wix.com or any free logomaker app to create logo; also pixabay.com has free photos)</li>
+<li>Customer Retention and Acquisition: SEO and Keyword 
+Research, Keyword rich selection of URL – good for brand recognition and easy recall</li>
+<li>Customer Retention: Mailchimp for email marketing purposes</li>
+<li>Customer Retention and Acquisition: Google Ads and Google 
+Analytics for research, paid marketing and analytics</li>
+<li>Branding and Participation: Build social media presence and 
+connect to web site, link building (attracting traffic from other sites)</li>
+
+
+### Watch how to build a measurement plan: https://www.youtube.com/watch?v=OB9R2StdGLE&feature=youtu.be ###
+
+
+
