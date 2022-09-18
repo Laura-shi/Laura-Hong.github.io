@@ -120,7 +120,7 @@ or clusters, among the cell lines based on their gene expression measurements.</
 
 <img width="654" alt="image" src="https://user-images.githubusercontent.com/60895448/190885273-668f10e7-81da-4b36-9c8f-c42efdbfc0c7.png">
 <img width="625" alt="image" src="https://user-images.githubusercontent.com/60895448/190885281-e789810c-7dd2-4e63-b553-5c26444b45de.png">
-<img width="615" alt="image" src="https://user-images.githubusercontent.com/60895448/190885293-54a53db0-c342-4553-8d79-6cfdebd8ac67.png">
+
 <img width="670" alt="image" src="https://user-images.githubusercontent.com/60895448/190885305-b90804f4-b572-41b9-bec9-2e170cc95d76.png">
 
 
