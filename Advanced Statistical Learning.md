@@ -11,6 +11,12 @@ The differents between Variance and Bais-variance, please visit: https://zhuanla
 <img width="540" alt="image" src="https://user-images.githubusercontent.com/60895448/190917564-55063f83-50c3-4937-9029-0da91828696d.png">
 <img width="823" alt="image" src="https://user-images.githubusercontent.com/60895448/190917592-86ff5182-abaf-46fd-a3cd-d5337f0472b3.png">
 <p>Z 分数没有具体的单位，它被称为标准分数。</p>
+<img width="795" alt="image" src="https://user-images.githubusercontent.com/60895448/190918053-d17ba326-21b4-4f6d-b3f9-75f0ff7b834a.png">
+<img width="757" alt="image" src="https://user-images.githubusercontent.com/60895448/190918092-1d09c4a3-c2d9-4721-8c1f-78a7c20d7530.png">
+<img width="791" alt="image" src="https://user-images.githubusercontent.com/60895448/190918110-e9ca215c-8404-4290-8355-5428c94ad8ba.png">
+<img width="765" alt="image" src="https://user-images.githubusercontent.com/60895448/190918179-82999c66-b5d0-46cc-acd0-9afcab6d3693.png">
+<p>正态分布交互演示网址：https://homepage.divms.uiowa.edu/~mbognar/applets/normal.html <br>/p>
+<img width="773" alt="image" src="https://user-images.githubusercontent.com/60895448/190919928-fc2d0af3-5546-40db-be6e-59596fd40233.png">
 
 
 
