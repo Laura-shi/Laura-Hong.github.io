@@ -285,7 +285,7 @@ www.yourwebsite.com/wp-
 admin         or
 www.yourwebsite.com/wp-
 admin.php</li>
-<li>for example, log in my website Lets Win Kicks: www.letswinkick.com/wp-admin.php</li>
+<li>for example, log in my website Lets Win Kicks: www.letswinkick.com/wp-admin.php or www.letswinkickcom/wp-admin</li>
 
 ## Wordpress – some initial cleanup ##
 <li>Fix the Permalink (Settings>Permalinks)</li>
