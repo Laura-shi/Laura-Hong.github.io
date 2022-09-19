@@ -337,4 +337,9 @@ https://www.youtube.com/watch?app=desktop&v=guUuaArckEw&t=2578s. <br>COVERS MULT
 <li>More WordPress <br>
 Add a downloadable file to a webpage using Gutenberg or Elementor
 https://www.youtube.com/watch?v=zgAlkXX9ZZA</li>
-<li></li>
+  
+  
+ ## WordPress articles - special topics ## 
+<li>About WordPress slugs: https:// (Links to an external site.)www.elegantthemes.com (Links to an external site.)/blog/tips-tricks/a-straight-forward-guide-to- (Links to an external site.)wordpress (Links to an external site.)-slugs</li>
+<li>Blogging: https://blog.hubspot.com/marketing/blog-strategy-guide#sm.001ge7b8ugj8d1e11co1cz9lzwql0 (Links to an external site.)</li>
+<li>A/B testing examples:https://www.designforfounders.com/ab-testing-examples/</li>
