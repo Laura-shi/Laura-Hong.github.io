@@ -281,11 +281,11 @@ with your project throughout the semester</li>
 <li>Test your login<br>
 • Does the website back-end login come up by typing in the URL below? <br>
 • Test your login <br>
-www.<yourwebsite>.com/wp-
+www.yourwebsite.com/wp-
 admin         or
-www.<yourwebsite>.com/wp-
+www.yourwebsite.com/wp-
 admin.php</li>
-<li>for example, log in my website Lets Win Kicks: www.</li>
+<li>for example, log in my website Lets Win Kicks: www.letswinkick.com/wp-admin.php</li>
 
 ## Wordpress – some initial cleanup ##
 <li>Fix the Permalink (Settings>Permalinks)</li>
