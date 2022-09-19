@@ -275,3 +275,66 @@ WordPress.org (a community site)</li>
   <li>FULLY HOSTED STEP COMPLETE; WORDPRESS INSTALL COMPLETE</li>
   <li>Dreamhost offers these options</li>
 </ol>
+## WordPress – Get started ## 
+<li>Create a GMAIL address for your e-biz now to use 
+with your project throughout the semester</li>
+<li>Test your login<br>
+• Does the website back-end login come up by typing in the URL below? <br>
+• Test your login <br>
+www.<yourwebsite>.com/wp-
+admin         or
+www.<yourwebsite>.com/wp-
+admin.php</li>
+<li>for example, log in my website Lets Win Kicks: www.</li>
+
+## Wordpress – some initial cleanup ##
+<li>Fix the Permalink (Settings>Permalinks)</li>
+<li>Fix the timezone (Settings>General)</li>
+<li>Fix the Site Title (Appearance>Customize)</li>
+  
+  
+### Permalinks ###
+<li>A permalink is what a web user will use to link to your page. It is preferable to set your permalink to something that is more readable</li>
+<li>Typically when you navigate to another page you will find ?, # and numbers with some ineligible text. Change this to a more readable format.</li>
+<li>Dashboard>Settings>Permalink</li>
+<li>Select Postname</li>
+
+## Starting with WordPress and plugins ##
+<li>Dashboard>Plugins</li>
+<li>Install/Activate Really Simple SSL plugin – to complete https setup</li>
+<li>Install/Activate plugin – Akismet plugin (anti-spam) – FREE version </li>
+<li>Set your Permalinks</li>
+
+  
+## The power of open-source WordPress - plugins ## 
+<li>Plugins are small programs that extend the functionality of WordPress in unlimited ways.</li>
+<li>Each plugin that you “hook” into your WordPress installation provides a small independent function.</li>
+<li>You as the website builder select and install various plugins.</li>
+<li>Plugins are plug-and-play – they can be activated and de-activated easily.</li>
+<li>Some plugins come “out-of-the-box” with WordPress but may need to be activated.</li>
+
+ ## step to be done after signing into WordPress site: Install WordPress SSL plugin. <br> and Akismet anti-spam plugin ##
+ <li>Installing Akismet plugin:https://www.youtube.com/watch?v=hb1ai5_QXe4 </li>
+ <li>Set Timezones for new wordpress site: https://www.youtube.com/watch?v=v80rhLtZ-dk</li>
+ <li>Setting permalinks:https://www.youtube.com/watch?v=hkpfcHowU6w</li>
+ <li>Adding plugins (FIRST TWO METHODS ARE GOOD ENOUGH):https://www.youtube.com/watch?v=QXbrdVjWaME</li>
+ <li>Quick Start Gutenberg Editor:https://www.youtube.com/watch?v=JjfrzGeB5_g&t=1225s and  https://www.youtube.com/watch?v=rld_XRvAOfs </li>
+ <li>Adding Themes:https://www.youtube.com/watch?v=DXebqII9WEI</li>
+ <li>Set static front page:https://www.youtube.com/watch?v=dOlyHHCB52o</li>
+ <li>Creating Menus in WordPress:https://www.youtube.com/watch?v=ERpr0TCnf4w</li>
+ <li>Thinking about Categories and Tags for your Blog Posts:https://www.youtube.com/watch?v=Lf8_Rc_h3b4</li>
+ <li>Adding Contact form 7 to a page (Gutenberg editor):https://www.youtube.com/watch?v=ZlzacY-mJps</li>
+ <li>Adding Call to Action Buttons to Page (Gutenberg editor):https://www.youtube.com/watch?v=4uzdveqSY74</li>
+ <li>Adding and formatting Buttons in elementor  https://www.youtube.com/watch?v=t_yFcTWQiPM</li>
+ <li>Contact Form 7 https://www.youtube.com/watch?v=ZlzacY-mJps</li>
+ <li>AIOSEO plugin https://www.youtube.com/watch?v=ZCIOQNxKoew</li>
+ <p>ELEMENTOR VIDEOS (They both say 2020 but they are different - check the timestamp),ONLY COVERS SINGLE PAGE SITE BUT HAS LOTS OF GOOD INFORMATION
+(2020 posted on Jan 13, 2019 3:06:34 – Ignore first 4 minutes and start from 4:00 to 1:53.  - ignore the last hour - Pro version)</p>
+ <li>ELEMENTOR VIDEO 1:https://www.youtube.com/watch?app=desktop&v=xYrvjaSJH_M&list=PL1hP9Ip_mfPGvdzteWPiyJYzIQ9U93UcB&index=3</li>
+ <li>ELEMENTOR VIDEO 2 -
+https://www.youtube.com/watch?app=desktop&v=guUuaArckEw&t=2578s. <br>COVERS MULTI PAGE SITE – AND SHOWS SOME PLUGINS THAT ARE USEFUL –
+(2020 posted Jan 20, 2020 4:11:05 – ignore first 14 minutes and start from 14:30 to 3:10:00. Ignore the last hour – Pro version)</li>
+<li>More WordPress <br>
+Add a downloadable file to a webpage using Gutenberg or Elementor
+https://www.youtube.com/watch?v=zgAlkXX9ZZA</li>
+<li></li>
