@@ -275,6 +275,7 @@ WordPress.org (a community site)</li>
   <li>FULLY HOSTED STEP COMPLETE; WORDPRESS INSTALL COMPLETE</li>
   <li>Dreamhost offers these options</li>
 </ol>
+
 ## WordPress – Get started ## 
 <li>Create a GMAIL address for your e-biz now to use 
 with your project throughout the semester</li>
@@ -285,7 +286,8 @@ www.yourwebsite.com/wp-
 admin         or
 www.yourwebsite.com/wp-
 admin.php</li>
-<li>for example, log in my website Lets Win Kicks: www.letswinkick.com/wp-admin.php or www.letswinkickcom/wp-admin</li>
+<li>for example, log in my website Lets Win Kicks: www.letswinkick.com/wp-admin.php or www.letswinkickcom/wp-admin<br>https://www.letswinkick.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.letswinkick.com%2Fwp-admin%2F&reauth=1
+</li>
 
 ## Wordpress – some initial cleanup ##
 <li>Fix the Permalink (Settings>Permalinks)</li>
