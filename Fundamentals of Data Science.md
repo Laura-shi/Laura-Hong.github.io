@@ -513,3 +513,69 @@ also: read.table, read.csv</li>
 <img width="630" alt="image" src="https://user-images.githubusercontent.com/60895448/190533499-45ac4203-4cb9-4e94-80a7-fce9070e5bc7.png">
 
 
+# week 6: Statistical Inference/Estimation #
+<li>To identify the concept of statistical inference and how it is applied</li>
+<li>To apply the Central Limit Theorem (CLT) to derive various sampling distributions</li>
+<li>To identify the concept of  a “confidence interval” and how to find them when 
+making inferences with both large (normal distribution) and small sample sizes 
+(Student-t distribution).</li>
+
+## Model fitting in R ##
+<li>in R, we use the function<strong> lm() </strong>to fit most of the liner models in Statistics</li>
+<li>lm can be used to carry out  regression, 
+analysis of variance and analysis of covariance.</li>
+<li>Usagge
+<ol>
+<li>lm(formula)</li>
+<li>lm(formula,data)</li>
+<li>can get a complete list of argument with help(lm)</li>
+<li>outputs of lm can be further processed by other 
+functions (e.g. summary, plot, anova).</li>
+<li>Example 1: the simplest statistical 
+model
+y = μ + ε
+can be fitted with lm(y~1) .</li>
+<li>Example 2: the first order linear model
+y = α + β x  + ε
+can be fitted by lm(y~x)</li>
+<li>Example 3: the first order linear model 
+with zero intercept y =  β x  + ε
+can be fitted by lm(y~x-1) .</li>
+</ol>
+</li>
+
+## Types of Statistical Inference ##
+<li>Estimation: <br>
+Estimating or predicting the value of the parameter. <br>
+Provide the accuracy of the estimate
+</li>
+<li>Hypothesis Testing:<br>
+Making a “sound decision” to decide:<br>
+“Did the sample come from a specific type of population?”</li>
+
+<img width="575" alt="image" src="https://user-images.githubusercontent.com/60895448/193377576-6e56b427-5afe-4811-9fb4-918bdbbe6236.png">
+
+<img width="575" alt="image" src="https://user-images.githubusercontent.com/60895448/193377582-2893d11e-d508-411a-9551-bd6870077ea7.png">
+<img width="615" alt="image" src="https://user-images.githubusercontent.com/60895448/193377679-2438dab0-0d20-45cc-a656-76d6e757c620.png">
+
+<img width="615" alt="image" src="https://user-images.githubusercontent.com/60895448/193377713-0b66c1a9-1596-4a42-bd95-98dad998803c.png">
+
+<img width="599" alt="image" src="https://user-images.githubusercontent.com/60895448/193377777-1c9fe56c-a03c-4ee4-b7ff-9f603bfa2576.png">
+
+<img width="597" alt="image" src="https://user-images.githubusercontent.com/60895448/193377807-2b8ad4f6-a07c-4cd6-9c03-56ae9ba78255.png">
+
+<img width="565" alt="image" src="https://user-images.githubusercontent.com/60895448/193377823-b0b15eb5-3d6f-454a-b4de-95f7905c8307.png">
+
+<img width="590" alt="image" src="https://user-images.githubusercontent.com/60895448/193378101-d27bca57-dbb6-47e0-8f4e-9d775e72f58d.png">
+<img width="546" alt="image" src="https://user-images.githubusercontent.com/60895448/193378113-07958890-b42b-4362-8e61-04d2784876d2.png">
+<img width="586" alt="image" src="https://user-images.githubusercontent.com/60895448/193378136-f9b35162-d50e-4fe1-ad62-2f5b546898b0.png">
+<img width="608" alt="image" src="https://user-images.githubusercontent.com/60895448/193378142-fa1c4086-9cb0-4c8d-ae58-97e36a2648f0.png">
+
+## Small Sample Inference ##
+<li>Consider a quantitative population with unknown mean μ and standard deviation σ.</li>
+<li>We  take a random sample of size n and compute the sample mean and sample standard deviation s.</li>
+<li>We need the normality assumption on 
+the population to proceed as before</li>
+
+<img width="590" alt="image" src="https://user-images.githubusercontent.com/60895448/193378420-03de57e8-5299-4c69-b73b-d95a1dc95517.png">
+
