@@ -579,3 +579,16 @@ the population to proceed as before</li>
 
 <img width="590" alt="image" src="https://user-images.githubusercontent.com/60895448/193378420-03de57e8-5299-4c69-b73b-d95a1dc95517.png">
 
+<img width="532" alt="image" src="https://user-images.githubusercontent.com/60895448/193378627-b9c5a105-22cd-47d5-8f67-284d7c51b9d0.png">
+
+<img width="496" alt="image" src="https://user-images.githubusercontent.com/60895448/193378652-ec5abf76-bc8b-4ad5-8823-90e086568600.png">
+
+## Normal VS t Distribution ##
+<li>Both N(0,1) and t-distribution are 
+symmetric around 0. The shapes of their 
+distributions are similar.</li>
+
+<img width="558" alt="image" src="https://user-images.githubusercontent.com/60895448/193378743-fd60cf46-d54f-4cb6-b19f-abb6642af2f9.png">
+<img width="519" alt="image" src="https://user-images.githubusercontent.com/60895448/193378754-a2257548-501e-48a6-8422-0ce0d6707a6d.png">
+<img width="477" alt="image" src="https://user-images.githubusercontent.com/60895448/193378775-b4de3d6c-ba98-4f04-952f-275ec6170eb0.png">
+
