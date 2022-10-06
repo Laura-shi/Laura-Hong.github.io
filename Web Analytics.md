@@ -345,3 +345,6 @@ https://www.youtube.com/watch?v=zgAlkXX9ZZA</li>
 <li>About WordPress slugs: https:// (Links to an external site.)www.elegantthemes.com (Links to an external site.)/blog/tips-tricks/a-straight-forward-guide-to- (Links to an external site.)wordpress (Links to an external site.)-slugs</li>
 <li>Blogging: https://blog.hubspot.com/marketing/blog-strategy-guide#sm.001ge7b8ugj8d1e11co1cz9lzwql0 (Links to an external site.)</li>
 <li>A/B testing examples:https://www.designforfounders.com/ab-testing-examples/</li>
+
+## Test for mobile friendly site ## 
+https://search.google.com/test/mobile-friendly?utm_source=mft&utm_medium=redirect&utm_campaign=mft-redirect
