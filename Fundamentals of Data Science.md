@@ -592,3 +592,94 @@ distributions are similar.</li>
 <img width="519" alt="image" src="https://user-images.githubusercontent.com/60895448/193378754-a2257548-501e-48a6-8422-0ce0d6707a6d.png">
 <img width="477" alt="image" src="https://user-images.githubusercontent.com/60895448/193378775-b4de3d6c-ba98-4f04-952f-275ec6170eb0.png">
 
+## ---------------- week 7 -------------------- ##
+## Parts of a Statistical Test ##
+<li>Alternative [or Research] hypothesis, <br>
+Ha: A claim (statement) to be decided upon 
+based on some evidence (data)</li>
+
+<li>Null hypothesis <br>
+H0: The opposite claim (default statement to 
+be assumed to be true until proven 
+otherwise.  It is usually stated first.)</li>
+
+<li>Test statistic and its p-value <br>
+A single statistic calculated from the sample 
+that can be used to reject or not reject H0.</li>
+  
+### Decision of a statistical test ###
+<li>Rejection region <br>
+a region and a rule are used to decide, 
+depending on where the value of the test 
+statistic falls, whether the null hypothesis H0 
+should be rejected.</li>
+
+<li>Conclusion  <br>
+Either “Reject H0” or “Failed to reject H0”, 
+with a pre-specified significance level. </li>
+  
+<li>Usually, the significance level is set at
+a = .01 or a = .05.</li>
+
+### p-value ### 
+<li>It is defined as the probability of observing, 
+just by chance,  a test statistic as extreme or 
+even more extreme than what we’ve actually 
+observed. </li>
+<li>If H0 is rejected, the p-value is the actual 
+probability that we have made an incorrect 
+decision.</li>
+<li>If the p-value is smaller than the preassigned
+significance level, a, then H0 is rejected.</li>
+  
+<li>A (very) small p-value is a (strong) indication 
+that the null hypothesis (H0) is unlikely to be 
+true.</li>
+<li>For a small p-value, if H0 were true, it is very 
+unlikely one should observe such extreme 
+events. Hence, the only reasonable explanation 
+left is that H0 is not true.</li>
+<li>There are other ways to do a t-test.</li>
+ 
+<li>To compute the p-value, we need to know <br>
+ its alternative hypothesis (one-sided or two-
+sided alternative test) <br>
+ sampling distribution about its test statistic 
+(z, t, ...) (under H0)</li>
+  
+![image](https://user-images.githubusercontent.com/60895448/194644998-b1d0d3fc-6b1a-432b-9f42-581ef9f3ff3b.png)
+![image](https://user-images.githubusercontent.com/60895448/194645722-9d5de66a-d0f1-4eae-a412-5f554a991ced.png)
+
+### Function t.test() in R ###
+<li>We can use t.test to perform a variety of  t-
+tests (for small sample) in R but there is no 
+z.test.</li>
+<li>Description <br>
+Performs one and two sample t-tests on 
+vectors of data. <br>
+ Usage  <br>
+ t.test(x, y = NULL, alternative 
+= c("two.sided", "less", 
+"greater"), mu = 0, paired = 
+FALSE, var.equal = FALSE, 
+conf.level = 0.95, ...)</li>
+
+### Case 3HT: Testing the difference μ1- μ2 ###
+<li>For two quantitative populations with 
+unknown means μ1, μ2 and standard 
+deviations σ1 and σ2 .</li>
+<li>We  take a random sample of sizes n1 and 
+n2 from the two populations, compute their 
+sample means   and sample standard 
+deviations s1,s2 .</li>
+<li>We are interested in hypothesis testing 
+about the difference μ1- μ2 when the 
+sample sizes are small.</li>
+<li>To test H0: μ1 - μ2 = D0,
+where D0 is a constant, usually 0.</li>
+<li>If we cannot assume equal variance assumption, 
+the test statistic used is the same one used for 
+large sample inference.</li>
+<li>However, hard to find the appropriate number d.f.</li>
+
+![image](https://user-images.githubusercontent.com/60895448/194646910-8fdec331-1876-4883-a74a-cc0a0214eb24.png)
