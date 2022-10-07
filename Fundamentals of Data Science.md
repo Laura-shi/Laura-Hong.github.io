@@ -683,3 +683,10 @@ large sample inference.</li>
 <li>However, hard to find the appropriate number d.f.</li>
 
 ![image](https://user-images.githubusercontent.com/60895448/194646910-8fdec331-1876-4883-a74a-cc0a0214eb24.png)
+
+![image](https://user-images.githubusercontent.com/60895448/194647213-9ade02db-d663-43b7-9a48-ba94199f0e96.png)
+
+![image](https://user-images.githubusercontent.com/60895448/194647364-c20d068a-a00a-44c3-b209-e49e6875f124.png)
+
+![image](https://user-images.githubusercontent.com/60895448/194647463-3f6e3d35-2578-4ee5-b857-186bfc0be1a1.png)
+
