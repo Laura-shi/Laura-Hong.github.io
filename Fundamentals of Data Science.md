@@ -690,3 +690,69 @@ large sample inference.</li>
 
 ![image](https://user-images.githubusercontent.com/60895448/194647463-3f6e3d35-2578-4ee5-b857-186bfc0be1a1.png)
 
+![image](https://user-images.githubusercontent.com/60895448/194647999-95c32239-731c-4cb5-b898-176d0f82bb1c.png)
+![image](https://user-images.githubusercontent.com/60895448/194648086-3e66425e-edd2-4832-8e1c-52713973d576.png)
+
+### Statistical Inference about variance(s) ###
+<li>If the primary parameter of interest is the
+population variance σ2, the test statistic to be
+constructed will rather follow a Chi-Square
+distribution.</li>
+<li>If the primary parameter of interest is
+the equality of two population variances σ12
+and σ22 the test statistic to be constructed 
+will rather follow an F distribution.</li>
+<li>Both Chi-Square distribution and F-distribution 
+have  important applications in other areas of 
+Statistics.</li>
+<li>Chi-Square distribution will be used in contingency
+tables.</li>
+<li>F- distribution will be used in ANOVA (Analysis of 
+Variance) table.</li>
+<li>We will study their distributions after we describe
+the  corresponding examples.</li>
+### Inference Concerning a Population Variance ### 
+
+<li>If the primary parameter of interest is the 
+population variance σ2, we choose a random
+sample of size n from a normal distribution.</li>
+<li>The sample variance s2 can be used in its 
+standardized form: </li>
+
+ ![image](https://user-images.githubusercontent.com/60895448/194649028-be917d2b-2f52-4c09-b15d-83b5cd4eb980.png)
+<li>which has a Chi-Square distribution with n - 1 
+degrees of freedom.</li>
+  
+![image](https://user-images.githubusercontent.com/60895448/194649571-be153746-2ed5-4ac8-862b-82338281d06b.png)
+![image](https://user-images.githubusercontent.com/60895448/194649732-02c843d8-db7c-4666-80af-7b20b5516488.png)
+![image](https://user-images.githubusercontent.com/60895448/194649768-a18c6235-5f9f-4b3e-b64c-0d26d1b575f5.png)
+  
+![image](https://user-images.githubusercontent.com/60895448/194650066-884e2f82-db49-4925-8d11-ae4738b8e322.png)
+![image](https://user-images.githubusercontent.com/60895448/194650129-d4d42aee-a731-4c7a-a9a0-68ad730ef3b7.png)
+![image](https://user-images.githubusercontent.com/60895448/194651107-316416e1-9110-499d-98c0-6982383a200e.png)
+![image](https://user-images.githubusercontent.com/60895448/194651165-d2c8402e-034b-4351-923b-50770eadd81b.png)
+![image](https://user-images.githubusercontent.com/60895448/194651204-5ec37e5e-d106-4e72-9b37-f645aec3a162.png)
+![image](https://user-images.githubusercontent.com/60895448/194651503-af539988-f5f2-4c77-a66e-4ec47e27e951.png)
+![image](https://user-images.githubusercontent.com/60895448/194651598-8bf4937f-6cf2-4c58-a256-2e5bcb03da34.png)
+![image](https://user-images.githubusercontent.com/60895448/194651927-f6c5b598-919c-4469-8802-2af7325b4f84.png)
+![image](https://user-images.githubusercontent.com/60895448/194652168-d663f4af-5504-4849-98d8-eb3dc880f632.png)
+![image](https://user-images.githubusercontent.com/60895448/194652210-f013205d-d1a2-4282-98f5-1ef8557a1ed7.png)
+![image](https://user-images.githubusercontent.com/60895448/194652259-f596fb8f-1179-463a-b7c2-5f16eed18600.png)
+![image](https://user-images.githubusercontent.com/60895448/194652287-3be3c5b1-6434-4fbe-8646-709fd5a0926b.png)
+![image](https://user-images.githubusercontent.com/60895448/194652633-e17fde41-2b63-4c7a-9962-0b402add1e5a.png)
+![image](https://user-images.githubusercontent.com/60895448/194652716-2cf5c077-b3f0-48b3-ab68-f021aa106994.png)
+![image](https://user-images.githubusercontent.com/60895448/194652773-daaef156-8848-4ba5-8ab2-4427e84d702f.png)
+![image](https://user-images.githubusercontent.com/60895448/194652852-e853ac1e-acab-42ed-813c-20f67bc6cc86.png)
+![image](https://user-images.githubusercontent.com/60895448/194652913-0247d852-234f-4dcc-87d3-ecafd61939c8.png)
+![image](https://user-images.githubusercontent.com/60895448/194653001-5290a2b8-6cd6-4971-97bb-c1cc93ef7908.png)
+![image](https://user-images.githubusercontent.com/60895448/194653049-35ef9f28-e740-4e20-b524-12b79ee84429.png)
+![image](https://user-images.githubusercontent.com/60895448/194653716-1504e3d7-414a-4faa-b617-b5dc2e2cfb45.png)
+![image](https://user-images.githubusercontent.com/60895448/194653972-2035913d-d45d-4f92-a7c8-5c70c34a09aa.png)
+![image](https://user-images.githubusercontent.com/60895448/194654130-f372b5c4-fe92-4e7b-937f-f3f8e36d4040.png)
+![image](https://user-images.githubusercontent.com/60895448/194655579-755c5f95-ae00-41ea-bddb-308944cb9716.png)
+
+![image](https://user-images.githubusercontent.com/60895448/194655232-14445183-15e8-42b2-bca3-f84948a4f9ef.png)
+![image](https://user-images.githubusercontent.com/60895448/194659433-9c803c4a-3e2c-4bc7-8022-833fa910ee5d.png)
+![image](https://user-images.githubusercontent.com/60895448/194660182-6ba9cce9-3e17-4c65-b756-4b64b950e9de.png)
+![image](https://user-images.githubusercontent.com/60895448/194660555-7281c8d6-8c29-4d77-8859-ca40843a5f42.png)
+
