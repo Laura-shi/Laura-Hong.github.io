@@ -1,3 +1,8 @@
+# context book #
+<p>
+advanced statistical learning 1 context book, please visit link:  https://www.statlearning.com/
+the questions solution of chapter #2, please visit link: https://jooolia.github.io/IntroStatLearning/Exercises/chapter_2/chapter_2_questions.html
+</p>
 # 统计的一些基本概念回顾 #
 <p>
 Some background  knowledge  of statistical, please visit: https://zh.m.wikipedia.org/zh-hans/%E6%96%B9%E5%B7%AE <br>
