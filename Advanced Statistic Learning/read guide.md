@@ -1,5 +1,5 @@
 <p>The Advanced Statistic Learning includes two parts, called Advanced Statistic Learning 1 and Advanced Statistic Learning 2</p>
-# Advanced Statistic Learning 1 
+# Advanced Statistic Learning 1 #
 
 ## text book ##
 <p> text book, please visit the link:https://hastie.su.domains/ISLR2/ISLRv2_website.pdf <br> 
