@@ -255,3 +255,157 @@ p_help(psych, web=F)      # opens help in R viewer
 describe(iris$Sepal.Length)             # one quantitative variable
 describe(iris)                          # entire data frame  
 
+# week 8
+# linear regression
+
+women
+
+# plot of women data in R, which data women is the build in data
+
+plot(weight~height,data = women,
+     xlab="Height (in)",ylab = "Weight(lb)",
+     main="Women data:American women aged 30-39")
+
+
+# direct computation of a,b by using R
+
+cov(women$weight,women$height)
+
+var(women$height)
+
+var(women$weight)
+
+s_xy<- cov(women$weight,women$height)
+s_xx<- var(women$height)
+b<- s_xy/s_xx; a<- mean(women$weight)-b*mean(women$height)
+a;b;
+
+# using lm() in R to compute a,b
+
+lm(weight ~ height, data = women)
+
+# using lm() to plot regression line
+#  the abline () function is commonly used for adding a straight line throught the current plot or graph with R software. 
+
+
+plot(weight~height,data = women,xlab="Height(in)",ylab="Weight(lb)",main="Women data:American women aged 30-39")
+abline(lm(weight~height,data = women),
+       col="red")
+
+# Diagnostic plots on residuals
+
+par(mfrow=c(1,2))
+fit<- lm(weight~height,data = women)
+plot(fit,which=1:2)
+
+
+# other diagnostic plots
+# there are 6 residual plots, their detailed discussion is beyond the scope of this class
+
+par(mfrow=c(2,2))
+plot(fit,which = 3:6)
+
+
+# building an Anova table in R
+fit<- lm(weight~height,data = women)
+anova(fit)
+
+# computing R^2 and adjusted R^2,using summary() function
+fit<- lm(weight~height,data = women)
+fit_summ<- summary(fit)
+names(fit_summ)
+
+fit_summ$r.squared
+
+fit_summ$adj.r.squared
+
+# additional output from lm()
+# the function lm() in R will return an "object"(say, fit) which can provide more information about the fitting of the linear model.
+# such as the regression coefficients(intercept a and slope b)
+fit<- lm(weight~height,data = women)
+names(fit)
+
+fit$coefficients
+
+fit$fitted.values # fit$fitted.values is the predicted value.
+
+# residual is the difference between an observed and a predicted value in regression
+fit$residuals # residual=observed value-predicted value
+
+# anova() to produce the ANOVA table
+# summary() to provide more detailed summary
+anova(fit)
+summary(fit)
+
+names(fit)
+
+fit$df.residual
+
+# components of output from summary() and anova()
+sfit<- summary(fit); names(sfit)
+
+sfit$df
+sfit[2]
+
+sfit[8:10]
+
+sfit$sigma
+
+summ<- summary(lm(weight~height,data = women))
+
+names(summ)
+
+summ_coeff<- summ$coefficients
+summ_coeff
+
+summ_coeff[1,1]
+summ_coeff[1,2]
+summ_coeff[2,2]
+
+# how to find the confidence interval (CI) 
+# confidence interval in R using
+predict(lm(weight~height,data = women),interval="confidence")
+
+# prediction interval in R using
+predict(lm(weight~height,data = women),interval="prediction")
+
+
+# example of using predict() in R
+x<- rnorm(25); y<- x+rnorm(25)
+new<- data.frame(x=seq(-3,3,0.5))
+fit<- lm(y~x)
+plim<- predict(fit,new,interval = "prediction")
+clim<- predict(fit,new,interval = "confidence")
+matplot(new$x,cbind(clim,plim[,-1]),
+        lty = c(1,2,2,3,3),
+        col = c(1,2,2,3,3),ylab = "predicted y")
+legend("toplef(t",c("fitted","conf(low))","conf(up)","pred(low)","pred(up)"),lty = c(1,2,2,3,3))
+
+
+# constructing confidence intervals
+fit<- lm(weight~height,data = women)
+confint(fit)
+
+# R code to simulate data following a first order linear regression model
+# generate n=100 points for x from chisquare(df=4)
+
+x<- rchisq(100,df=4)
+x<- sort(x)
+
+# specify the parameters for the regression model
+a<- 2; b<- 1.5; s<-3
+e<-rnorm(100,mean = 0,sd=s)
+y<- a+b*x+e
+
+# correlation coefficient between x and y 
+cor(x,y)
+
+# true model: y=2+1.5x+e, sigma=3
+fit<- lm(y~x)
+summary(fit)
+
+# common diagnostic plots on residuals
+fit<- lm(y~x)
+plot(fit,which = 1:2)
+
+
