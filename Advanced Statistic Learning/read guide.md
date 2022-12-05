@@ -8,8 +8,8 @@ The all datasets into the text book, they can be downloaded from link: https://w
 </p>
 <p>Solutions of text book:<br>
 Chapter 2: https://jooolia.github.io/IntroStatLearning/Exercises/chapter_2/chapter_2_questions.html <br>
-Chapter 3: https://rpubs.com/ppaquay/65559
+Chapter 3: https://rpubs.com/ppaquay/65559 <br>
 
-Chapter 5: https://rpubs.com/ppaquay/65561
+Chapter 5: https://rpubs.com/ppaquay/65561 <br>
 Chpater 6: https://rstudio-pubs-static.s3.amazonaws.com/65562_c062f4bb166140c6b7126b01adb27444.html
 </p>
