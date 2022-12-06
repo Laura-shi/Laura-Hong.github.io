@@ -1,0 +1,577 @@
+---
+title: "Advance Stats I Project: Predict Customer Churn in the Telco Industry"
+author: "Luke Philip Ogweno and Hong Shi"
+format: pdf
+editor: visual
+bibliography: references.bib
+---
+
+# Introduction
+
+Customer churn is one of the major concerns for large companies due to its direct effect on the company\'s revenue, especially in the telecom field. Companies are seeking to develop the customer churn prediction model to predict the risk of customer churns[@malikireddy2021].
+
+Customer retention is one of the primary growth pillars for products with a subscription-based [business model](https://www.altexsoft.com/blog/business/software-business-models-examples-revenue-streams-and-characteristics-for-products-services-and-platforms/). Competition is tough in the SaaS market where customers are free to choose from plenty of providers even within one product category. Several bad experiences -- or even one -- and a customer may quit.
+
+When analyzing customer data from a company many interesting patterns can be observed and further analysis can lead to predictive models for various metrics. One such interesting metric is customer churn. Another interesting metric is the monthly payments. Usually, customers want to get quality service for the best possible price. If they don't get it, then they may end up choosing another service provider.
+
+## **What is customer churn?**
+
+**Customer churn (or customer attrition)** is a tendency of customers to abandon a brand and stop being a paying client of a particular business. The percentage of customers that discontinue using a company's products or services during a particular time period is called a *customer churn (attrition) rate*.
+
+Churn rate is a health indicator for businesses whose customers are subscribers and paying for services on a recurring basis, notes head of data analytics department at ScienceSoft [Alex Bekker](https://twitter.com/alexlbekker). Furthermore,
+it is common knowledge that retaining a customer is about five times less expensive than acquiring a new one [@marketin2010], this creates pressure to have better and more effective churn campaigns.
+
+**Use cases for customer churn prediction**
+
+Among modern service providers that we can find churn prediction includes:
+
+-   **Music and video streaming services** are probably the most commonly associated with the subscription business model (Netflix, YouTube, Apple Music, Google Play, Spotify, Hulu, Amazon Video, Deezer, etc.).
+
+-   **Media.** Digital presence is a must among the press, so news companies offer readers digital subscriptions besides print ones (Bloomberg, *The Guardian, Financial Times, The New York Times*, Medium etc.).
+
+-   **Telecom companies (cable or wireless).** These companies may provide a full range of products and services, including wireless network, internet, TV, cell phone, and home phone services (AT&T, Sprint, Verizon, Cox Communications, etc.). Some specialize in mobile telecommunications (China Mobile, Vodafone, T-Mobile, etc.).
+
+-   **Software as a service providers.** The adoption of cloud-hosted software is growing. According to [Gartner](https://www.gartner.com/en/newsroom/press-releases/2018-09-12-gartner-forecasts-worldwide-public-cloud-revenue-to-grow-17-percent-in-2019), the SaaS market remains the largest segment of the cloud market. Its revenue is expected to grow 17.8 percent and reach \$85.1 billion in 2019. The product range of SaaS providers is extensive: graphic and video editing (Adobe Creative Cloud, Canva), accounting (Sage 50cloud, FreshBooks), eCommerce (BigCommerce, Shopify), email marketing (MailChimp, Zoho Campaigns), and many others.
+
+These company types may use churn rate to measure the effectiveness of cross-department operations and product management.
+
+**Identifying at-risk customers with machine learning: problem-solving at a glance**
+
+The main trait of [machine learning](https://www.altexsoft.com/whitepapers/machine-learning-bridging-between-business-and-data-science/) is building systems capable of finding patterns in data, learning from it without explicit programming. In the context of customer churn prediction, these are online behavior characteristics that indicate decreasing customer satisfaction from using company services/products.
+
+[![Figure 1: Churn rate predictive model](https-lh3-googleusercontent-com-purwbwzko1ru9ji2.png)](https://www.bing.com/images/search?view=detailV2&ccid=NaXfxTOk&id=10E9212438F12FDF9D9AF2609FF0B3A2F821A695&thid=OIP.NaXfxTOkfCi3tB5kpmpJ_wHaEB&mediaurl=https%3a%2f%2fcontent.altexsoft.com%2fmedia%2f2019%2f03%2fhttps-lh3-googleusercontent-com-purwbwzko1ru9ji2.png&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.35a5dfc533a47c28b7b41e64a66a49ff%3frik%3dlaYh%252bKKz8J9g8g%26pid%3dImgRaw%26r%3d0&exph=869&expw=1600&q=altexsoft+Churn+rate+predictive+model&simid=608040788359315693&FORM=IRPRST&ck=0B1E23C7D047D1C202D05D2059C33BAC&selectedIndex=0)
+
+The advancement of machine learning and artificial intelligence tends to increases the possibilities to predict customer churns with high performance. The Support system and consumer service dissatisfaction is the main reason to the customer churn. Forecasting the customer churning risk helps the companies to deal with the customer churn problem \[[@lalwani2021], [@al-mashraie2020]\].
+
+Generally, machine learning techniques analyze the customer characteristics by using the datasets like call details, account and billing information, the future behavior of customers with personal demographics. Initially, data mining techniques are primarily applied to the churn prediction which is predicted by the telecom churners. For instance, neural networks and decision trees are applied to develop accurate churn prediction systems \[[@idris2017], [@vo2021]\]. Various machine learning algorithm was applied to analyze the churning task like artificial neural networks, random forest, the statistical classifier (KNN), logistic regression, decision tree, support vector machines, and Naïve Bayes. The hybrid classification of more than one method was applied in the churn prediction which outperforms the single algorithm \[[@vijaya2018], [@decaigny2018]\]. Various feature selection and classifier methods are applied in the existing customer churn prediction model \[[@alboukaey2020]\].
+
+# Methodology
+
+The overall scope of work data scientists carry out to build ML-powered systems capable to forecast customer attrition may include the following:
+
+-   Understanding a problem and final goal
+
+-   Data collection
+
+-   Data preparation and preprocessing
+
+-   Modeling and testing
+
+-   Model deployment and monitoring
+
+Figure 2 shows the method adopted for this project
+
+![Figure 2: Exploratory Data Analysis](System-Architecture_W640.jpg)
+
+## Objectives:
+
+The objectives of this work is to analyse the churn in the telco industry using machine leaning algorithms such as logistic regresion, decision tree and random forest.
+
+## **Classification**
+
+From a machine learning perspective, a churn model is a classification algorithm. In the sense that using historical information, a prediction of which current customers are more like ly to defect, is made. This model is normally created using one of a number of well establish algorithms (Logistic regression, neural networks, random forests, among others)\[[@khakabi2010], [@ngai2009]\]
+
+The goal of classification is to determine to which class or category a data point (customer in our case) belongs to. For classification problems, data scientists would use historical data with predefined target variables AKA labels (churner/non-churner) -- answers that need to be predicted -- to train an algorithm. With classification, businesses can answer the following questions:
+
+-   Will this customer churn or not?
+
+-   Will a customer renew their subscription?
+
+-   Will a user downgrade a pricing plan?
+
+-   Are there any signs of unusual customer behavior?
+
+## **Regression**
+
+Customer churn prediction can be also formulated as a regression task. Regression analysis is a statistical technique to estimate the relationship between a target variable and other data values that influence the target variable, expressed in continuous values.
+
+# Data Overview
+
+The data was downloaded from IBM Sample Data Sets for customer retention programs. ([**IBM Sample Data Sets**](https://www.ibm.com/communities/analytics/watson-analytics-blog/guide-to-sample-datasets/)). The goal of this project is to predict behaviors of churn or not churn to help retain customers. Each row represents a customer, each column contains a customer's attribute.
+
+Customers who left within the last month -- the column is called Churn Services that each customer has signed up for -- phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies Customer account information -- how long they've been a customer, contract, payment method, paperless billing, monthly charges, and total charges Demographic info about customers -- gender, age range, and if they have partners and dependents
+
+## Load libraries
+
+```{r include = FALSE}
+
+knitr::opts_chunk$set(echo=FALSE)
+```
+
+```{r, message = FALSE, warning = FALSE}
+library(plyr)
+library(tidyverse)
+library(corrplot)
+library(ggplot2)
+library(gplots)
+library(gridExtra)
+library(ggthemes)
+library(caret)
+library(MASS)
+library(rms)
+library(e1071)
+library(ROCR)
+library(randomForest)
+library(party)
+library(Amelia)
+library(mlbench)
+library(rpart)  
+library(rpart.plot) 
+library(pROC)
+library(ggpubr)
+```
+
+**Load dataset:**
+
+```{r}
+#churn <- read.csv('https://raw.githubusercontent.com/microbhai/CustomerChurnAnalysis/master/telecommunication_customer_churn.csv')
+
+churn <- read.csv('https://raw.githubusercontent.com/IBM/telco-customer-churn-on-icp4d/master/data/Telco-Customer-Churn.csv')
+str(churn)
+```
+
+The raw data contains 7043 rows (customers) and 21 columns (features). The "Churn" column is our target. We used all other columns as features to our model. In the dataset only 1869 customers are churners, leading to a churn ratio of 26.54%.
+
+# Exploration and Data Analysis (EDA)
+
+## **Missing values in each columns**
+
+We use sapply to check the number if missing values in each columns. We found that there are 11 missing values in "TotalCharges" columns. So, let's remove all rows with missing values.
+
+```{r}
+sapply(churn, function(x) sum(is.na(x)))
+```
+
+```{r}
+churn <- churn[complete.cases(churn), ]
+```
+
+Check missingness in the variables
+
+```{r}
+missmap(churn, col=c("blue", "red"), legend=FALSE)
+```
+
+Based on the summary, there is no missing data in this dataset!
+
+```{r}
+dim(distinct(churn)) ## removes duplicate rows based on each columns
+```
+
+There does not appear to be any duplicate observations in the data set.\
+
+## **Data wrangling**
+
+Look at the variables, we can see that we have some wranglings to do.
+
+### 1. We will change "No internet service" to "No" for six columns, they are: "OnlineSecurity", "OnlineBackup", "DeviceProtection", "TechSupport", "streamingTV", "streamingMovies".
+
+```{r}
+cols_recode1 <- c(10:15)
+for(i in 1:ncol(churn[,cols_recode1])) {
+        churn[,cols_recode1][,i] <- as.factor(mapvalues
+                                              (churn[,cols_recode1][,i], from =c("No internet service"),to=c("No")))
+}
+```
+
+### **2. Change "No phone service" to "No" for column "MultipleLines"**
+
+```{r}
+churn$MultipleLines <- as.factor(mapvalues(churn$MultipleLines, 
+                                           from=c("No phone service"),
+                                           to=c("No")))
+```
+
+### **3. Grouping Tenure**
+
+Since the minimum tenure is 1 month and maximum tenure is 72 months, we can group them into five tenure groups: "0--12 Month", "12--24 Month", "24--48 Months", "48--60 Month", "\> 60 Month"
+
+```{r}
+min(churn$tenure); max(churn$tenure)
+```
+
+Grouping as shown below
+
+```{r}
+group_tenure <- function(tenure){
+    if (tenure >= 0 & tenure <= 12){
+        return('0-12 Month')
+    }else if(tenure > 12 & tenure <= 24){
+        return('12-24 Month')
+    }else if (tenure > 24 & tenure <= 48){
+        return('24-48 Month')
+    }else if (tenure > 48 & tenure <=60){
+        return('48-60 Month')
+    }else if (tenure > 60){
+        return('> 60 Month')
+    }
+}
+```
+
+```{r}
+churn$tenure_group <- sapply(churn$tenure,group_tenure)
+churn$tenure_group <- as.factor(churn$tenure_group)
+```
+
+### **4. Change the values in column "SeniorCitizen" from 0 or 1 to "No" or "Yes".**
+
+```{r}
+churn$SeniorCitizen <- as.factor(mapvalues(churn$SeniorCitizen,
+                                      from=c("0","1"),
+                                      to=c("No", "Yes")))
+```
+
+```{r}
+churn$Churn <- as.factor(mapvalues(churn$Churn,
+                                      from=c("No","Yes"),
+                                      to=c("0", "1")))
+```
+
+### **5. Remove the columns we do not need for the analysis.**
+
+```{r}
+churn$customerID <- NULL
+churn$tenure <- NULL
+```
+
+## **Exploratory data analysis and feature selection**
+
+### **Correlation between numeric variables**
+
+```{r}
+numeric.var <- sapply(churn, is.numeric)
+corr.matrix <- cor(churn[,numeric.var])
+corrplot(corr.matrix, main="\n\nCorrelation Plot for Numerical Variables", method="number")
+```
+
+```{r echo= FALSE, warning = FALSE, message=FALSE}
+churn %>%
+  dplyr::select (TotalCharges, MonthlyCharges) %>%
+  cor() %>%
+  corrplot.mixed(upper = "circle", tl.col = "black", number.cex = 0.7)
+```
+
+The plot shows high correlations between Totalcharges and tenure and between TotalCharges and MonthlyCharges. Pay attention to these variables while training models later. Multicollinearity does not reduce the predictive power or reliability of the model as a whole, at least within the sample data set. But it affects calculations regarding individual predictors.
+
+The Monthly Charges and Total Charges are correlated. So one of them will be removed from the model. We remove Total Charges.
+
+Remove TotalCharges
+
+```{r}
+churn$TotalCharges <- NULL
+```
+
+### Continuous Variables
+
+For continuous variables, let's check for distributions.
+
+```{r echo= FALSE, warning = FALSE, message=FALSE}
+ggplot(data = churn, aes(MonthlyCharges, color = Churn))+
+  geom_freqpoly(binwidth = 5, size = 1)
+```
+
+The number of current customers with MonthlyCharges below \$25 is extremly high. For the customers with Monthlycharges greater than \$30, the distributions are similar between who churned and who did not churn.
+
+### **Bar plots of categorical variables**
+
+```{r echo= FALSE, warning = FALSE, message=FALSE}
+p1 <- ggplot(churn, aes(x=gender)) + ggtitle("Gender") + xlab("Gender") +
+  geom_bar(aes(y = 100*(..count..)/sum(..count..)), width = 0.5) + ylab("Percentage") + coord_flip() + theme_minimal()
+p2 <- ggplot(churn, aes(x=SeniorCitizen)) + ggtitle("Senior Citizen") + xlab("Senior Citizen") + 
+  geom_bar(aes(y = 100*(..count..)/sum(..count..)), width = 0.5) + ylab("Percentage") + coord_flip() + theme_minimal()
+p3 <- ggplot(churn, aes(x=Partner)) + ggtitle("Partner") + xlab("Partner") + 
+  geom_bar(aes(y = 100*(..count..)/sum(..count..)), width = 0.5) + ylab("Percentage") + coord_flip() + theme_minimal()
+p4 <- ggplot(churn, aes(x=Dependents)) + ggtitle("Dependents") + xlab("Dependents") +
+  geom_bar(aes(y = 100*(..count..)/sum(..count..)), width = 0.5) + ylab("Percentage") + coord_flip() + theme_minimal()
+grid.arrange(p1, p2, p3, p4, ncol=2)
+```
+
+```{r}
+p5 <- ggplot(churn, aes(x=PhoneService)) + ggtitle("Phone Service") + xlab("Phone Service") +
+  geom_bar(aes(y = 100*(..count..)/sum(..count..)), width = 0.5) + ylab("Percentage") + coord_flip() + theme_minimal()
+p6 <- ggplot(churn, aes(x=MultipleLines)) + ggtitle("Multiple Lines") + xlab("Multiple Lines") + 
+  geom_bar(aes(y = 100*(..count..)/sum(..count..)), width = 0.5) + ylab("Percentage") + coord_flip() + theme_minimal()
+p7 <- ggplot(churn, aes(x=InternetService)) + ggtitle("Internet Service") + xlab("Internet Service") + 
+  geom_bar(aes(y = 100*(..count..)/sum(..count..)), width = 0.5) + ylab("Percentage") + coord_flip() + theme_minimal()
+p8 <- ggplot(churn, aes(x=OnlineSecurity)) + ggtitle("Online Security") + xlab("Online Security") +
+  geom_bar(aes(y = 100*(..count..)/sum(..count..)), width = 0.5) + ylab("Percentage") + coord_flip() + theme_minimal()
+grid.arrange(p5, p6, p7, p8, ncol=2)
+```
+
+```{r}
+p9 <- ggplot(churn, aes(x=OnlineBackup)) + ggtitle("Online Backup") + xlab("Online Backup") +
+  geom_bar(aes(y = 100*(..count..)/sum(..count..)), width = 0.5) + ylab("Percentage") + coord_flip() + theme_minimal()
+p10 <- ggplot(churn, aes(x=DeviceProtection)) + ggtitle("Device Protection") + xlab("Device Protection") + 
+  geom_bar(aes(y = 100*(..count..)/sum(..count..)), width = 0.5) + ylab("Percentage") + coord_flip() + theme_minimal()
+p11 <- ggplot(churn, aes(x=TechSupport)) + ggtitle("Tech Support") + xlab("Tech Support") + 
+  geom_bar(aes(y = 100*(..count..)/sum(..count..)), width = 0.5) + ylab("Percentage") + coord_flip() + theme_minimal()
+p12 <- ggplot(churn, aes(x=StreamingTV)) + ggtitle("Streaming TV") + xlab("Streaming TV") +
+  geom_bar(aes(y = 100*(..count..)/sum(..count..)), width = 0.5) + ylab("Percentage") + coord_flip() + theme_minimal()
+grid.arrange(p9, p10, p11, p12, ncol=2)
+```
+
+```{r}
+p13 <- ggplot(churn, aes(x=StreamingMovies)) + ggtitle("Streaming Movies") + xlab("Streaming Movies") +
+  geom_bar(aes(y = 100*(..count..)/sum(..count..)), width = 0.5) + ylab("Percentage") + coord_flip() + theme_minimal()
+p14 <- ggplot(churn, aes(x=Contract)) + ggtitle("Contract") + xlab("Contract") + 
+  geom_bar(aes(y = 100*(..count..)/sum(..count..)), width = 0.5) + ylab("Percentage") + coord_flip() + theme_minimal()
+p15 <- ggplot(churn, aes(x=PaperlessBilling)) + ggtitle("Paperless Billing") + xlab("Paperless Billing") + 
+  geom_bar(aes(y = 100*(..count..)/sum(..count..)), width = 0.5) + ylab("Percentage") + coord_flip() + theme_minimal()
+p16 <- ggplot(churn, aes(x=PaymentMethod)) + ggtitle("Payment Method") + xlab("Payment Method") +
+  geom_bar(aes(y = 100*(..count..)/sum(..count..)), width = 0.5) + ylab("Percentage") + coord_flip() + theme_minimal()
+p17 <- ggplot(churn, aes(x=tenure_group)) + ggtitle("Tenure Group") + xlab("Tenure Group") +
+  geom_bar(aes(y = 100*(..count..)/sum(..count..)), width = 0.5) + ylab("Percentage") + coord_flip() + theme_minimal()
+grid.arrange(p13, p14, p15, p16, p17, ncol=2)
+```
+
+All of the categorical variables seem to have a reasonably broad distribution, therefore, all of them will be kept for the further analysis.
+
+## **Logistic Regression**
+
+First, we split the data into training and testing sets
+
+```{r}
+intrain<- createDataPartition(churn$Churn,p=0.7,list=FALSE)
+set.seed(2022)
+training<- churn[intrain,]
+testing<- churn[-intrain,]
+```
+
+Check out the results if correct
+
+```{r}
+dim(training); dim(testing)
+```
+
+### **Fitting the Logistic Regression Model**
+
+```{r}
+LogModel <- glm(Churn ~., data=training,family=binomial(link="logit"))
+print(summary(LogModel))
+```
+
+## **Feature Analysis**
+
+The top three most-relevant features include Contract, tenure_group and PaperlessBilling.
+
+```{r}
+anova(LogModel, test="Chisq")
+```
+
+Analyzing the deviance table we can see the drop in deviance when adding each variable one at a time. Adding InternetService, Contract and tenure_group significantly reduces the residual deviance. The other variables such as PaymentMethod and Dependents seem to improve the model less even though they all have low p-values.
+
+## **Assessing the predictive ability of the Logistic Regression model**
+
+```{r}
+testing$Churn <- as.character(testing$Churn)
+testing$Churn[testing$Churn=="No"] <- "0"
+testing$Churn[testing$Churn=="Yes"] <- "1"
+fitted.results <- predict(LogModel,newdata=testing,type='response')
+fitted.results <- ifelse(fitted.results > 0.5,1,0)
+misClasificError <- mean(fitted.results != testing$Churn)
+print(paste('Logistic Regression Accuracy',1-misClasificError))
+```
+
+### **Logistic Regression Confusion Matrix**
+
+```{r}
+print("Confusion Matrix for Logistic Regression"); table(testing$Churn, fitted.results > 0.5)
+```
+
+### **Odds Ratio**
+
+**\
+**One of the interesting performance measurements in logistic regression is Odds Ratio.Basically, Odds ratio is what the odds of an event is happening.
+
+```{r}
+exp(cbind(OR=coef(LogModel), confint(LogModel)))
+```
+
+For each unit increase in Monthly Charge, there is a 2.4% decrease in the likelihood of a customer's churning.
+
+```{r}
+LogModel2 <- stepAIC(LogModel, trace = 0)
+summary(LogModel2)
+```
+
+use AIC to exclude variables based on their significance and create a new model thenuUse VIF function to check multicollinearity
+
+```{r}
+vif(LogModel2)
+```
+
+## **Decision Tree**
+
+### **Decision Tree visualization**
+
+**\
+**For illustration purpose, we are going to use only three variables for plotting Decision Trees, they are "Contract", "tenure_group" and "PaperlessBilling".
+
+```{r}
+rm(list = ls())
+churn <- read.csv('https://raw.githubusercontent.com/IBM/telco-customer-churn-on-icp4d/master/data/Telco-Customer-Churn.csv', stringsAsFactors=T)
+churn <- churn[complete.cases(churn), ]
+```
+
+```{r}
+cols_recode1 <- c(10:15)
+for(i in 1:ncol(churn[,cols_recode1])) {
+        churn[,cols_recode1][,i] <- as.factor(mapvalues
+                                              (churn[,cols_recode1][,i], from =c("No internet service"),to=c("No")))
+}
+```
+
+Grouping
+
+```{r}
+group_tenure <- function(tenure){
+    if (tenure >= 0 & tenure <= 12){
+        return('0-12 Month')
+    }else if(tenure > 12 & tenure <= 24){
+        return('12-24 Month')
+    }else if (tenure > 24 & tenure <= 48){
+        return('24-48 Month')
+    }else if (tenure > 48 & tenure <=60){
+        return('48-60 Month')
+    }else if (tenure > 60){
+        return('> 60 Month')
+    }
+}
+```
+
+```{r}
+churn$tenure_group <- sapply(churn$tenure,group_tenure)
+churn$tenure_group <- as.factor(churn$tenure_group)
+```
+
+```{r}
+churn$SeniorCitizen <- as.factor(mapvalues(churn$SeniorCitizen,
+                                      from=c("0","1"),
+                                      to=c("No", "Yes")))
+```
+
+```{r}
+churn$customerID <- NULL
+churn$tenure <- NULL
+churn$TotalCharges <- NULL
+```
+
+```{r}
+intrain<- createDataPartition(churn$Churn,p=0.7,list=FALSE)
+set.seed(2017)
+training<- churn[intrain,]
+testing<- churn[-intrain,]
+```
+
+For illustration purpose, we are going to use only three variables, they are "Contract", "tenure_group" and "PaperlessBilling".
+
+```{r}
+tree <- ctree(Churn~Contract+tenure_group+PaperlessBilling, training)
+```
+
+```{r}
+plot(tree, type='simple')
+```
+
+```{r}
+# tree <- rpart(Churn~Contract+tenure_group+PaperlessBilling, training, method = "class") #assigns decision tree values
+```
+
+1\. Out of three variables we use, Contract is the most important variable to predict customer churn or not churn.\
+2. If a customer in a one-year or two-year contract, no matter he (she) has PapelessBilling or not, he (she) is less likely to churn.\
+3. On the other hand, if a customer is in a month-to-month contract, and in the tenure group of 0--12 month, and using PaperlessBilling, then this customer is more likely to churn.
+
+### **Decision Tree Confusion Matrix**
+
+**\
+**We are using all the variables to product confusion matrix table and make predictions.
+
+```{r}
+pred_tree <- predict(tree, testing)
+print("Confusion Matrix for Decision Tree"); table(Predicted = pred_tree, Actual = testing$Churn)
+```
+
+### **Decision Tree Accuracy**
+
+```{r}
+p1 <- predict(tree, training)
+tab1 <- table(Predicted = p1, Actual = training$Churn)
+tab2 <- table(Predicted = pred_tree, Actual = testing$Churn)
+print(paste('Decision Tree Accuracy',sum(diag(tab2))/sum(tab2)))
+
+```
+
+The accuracy for Decision Tree has hardly improved. Let's see if we can do better using Random Forest.
+
+## **Random Forest**
+
+### **Random Forest Initial Model**
+
+```{r}
+set.seed(2017)
+rfModel <- randomForest(Churn ~., data = training)
+print(rfModel)
+```
+
+The error rate is relatively low when predicting "No", and the error rate is much higher when predicting "Yes".
+
+### **Random Forest Prediction and Confusion Matrix**
+
+```{r}
+pred_rf <- predict(rfModel, testing)
+caret::confusionMatrix(pred_rf, testing$Churn)
+```
+
+### **Random Forest Error Rate**
+
+```{r}
+plot(rfModel)
+```
+
+We use this plot to help us determine the number of trees. As the number of trees increases, the OOB error rate decreases, and then becomes almost constant. We are not able to decrease the OOB error rate after about 100 to 200 trees.
+
+### **Tune Random Forest Model**
+
+```{r}
+t <- tuneRF(training[, -18], training[, 18], stepFactor = 0.5, plot = TRUE, ntreeTry = 200, trace = TRUE, improve = 0.05)
+```
+
+We use this plot to give us some ideas on the number of mtry to choose. OOB error rate is at the lowest when mtry is 2. Therefore, we choose mtry=2.
+
+### **Fit the Random Forest Model After Tuning**
+
+```{r}
+rfModel_new <- randomForest(Churn ~., data = training, ntree = 200, mtry = 2, importance = TRUE, proximity = TRUE)
+print(rfModel_new)
+```
+
+OOB error rate decreased to 20.98% from 21.81%% earlier.
+
+### **Random Forest Predictions and Confusion Matrix After Tuning**
+
+```{r}
+pred_rf_new <- predict(rfModel_new, testing)
+caret::confusionMatrix(pred_rf_new, testing$Churn)
+```
+
+The accuracy and the sensitivity improved, compared with the initial Random Forest model.
+
+### **Random Forest Feature Importance**
+
+```{r}
+varImpPlot(rfModel_new, sort=T, n.var = 10, main = 'Top 10 Feature Importance')
+```
+
+## **Summary**
+
+From the above example, we can see that Logistic Regression and Random Forest performed better than Decision Tree for customer churn analysis for this particular dataset.
+
+Throughout the analysis,we have learnt several important things::
+
+1.  Features such as tenure_group, Contract, PaperlessBilling, MonthlyCharges and InternetService appear to play a role in customer churn.
+
+2.  There does not seem to be a relationship between gender and churn.
+
+3.  Customers in a month-to-month contract, with PaperlessBilling and are within 12 months tenure, are more likely to churn; On the other hand, customers with one or two year contract, with longer than 12 months tenure, that are not using PaperlessBilling, are less likely to churn.
+
+# References
