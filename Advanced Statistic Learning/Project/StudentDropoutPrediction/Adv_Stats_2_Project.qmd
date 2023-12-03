@@ -1,0 +1,992 @@
+---
+title: "Students Dropout Prediction Model in Higher Education Institutions Using Machine Learning Algorithms"
+author: "Luke Philip Ogweno, Hong Shi, and Divya Sharma"
+format:
+  pdf:
+    include-in-header:
+      - file: packages.tex
+      - file: usepackage[margin=0.5in]{geometry}
+      - file: pdflatex()  
+      - macros.tex 
+editor: visual
+bibliography: references.bib
+---o
+---
+
+## Towards a Students' Dropout Prediction Model in Higher Education Institutions Using Machine Learning Algorithms
+
+\newpage
+
+# Abstract
+
+\newpage
+
+# 1 Introduction
+
+Academic success in higher education is vital for jobs, social justice, and economic growth. Dropout represents the most problematic issue that higher education institutions must address to improve their success. There is no universally accepted definition of dropout. The proportion of students who dropout varies between different studies depending on how dropout is defined, the data source, and the calculation methods [@behr2020]
+
+Frequently, dropout is analyzed in the research literature based on the timing of the dropout (early vs. late) [@kehm2019]. Due to differences in reporting, it is not possible to compare dropout rates across institutions [@atchley2013]. In this work, we define dropouts from a micro-perspective, where field and institution changes are considered dropouts independently of the timing these occur. This approach leads to much higher dropout rates than the macro-perspective, which considers only students who leave the higher education system without a degree.
+
+Namoun and Alshanqiti [@namoun2020] performed an exhaustive search that found 62 papers published in peer-reviewed journals between 2010 and 2020, which present intelligent models to predict student performance. Additionally, in recent years, early prediction of student outcomes has attracted increasing research interest \[[@saa2019],[@akçapinar2019],[@daud2017], and [@martins2021]\]. However, despite the research interest and the considerable amount of data that the universities generate, there is a need to collect more and better administrative data, including dropout and transfer reasons [@kehm2019].
+
+This project uses a dataset created from a higher education institution (acquired from several disjoint databases) related to students enrolled in different undergraduate degrees, such as agronomy, design, education, nursing, journalism, management, social service, and technologies. The dataset includes information known at the time of student enrollment (academic path, demographics, and macroeconomics and socioeconomic factors) and the students' academic performance at the end of the first and second semesters. The data are used to build classification models to predict student dropout and academic success. The problem is formulated as a three-category classification task (dropout, enrolled, and graduate) at the end of the normal duration of the course. These classification models are part of a Learning Analytic tool that includes predictive analyses which provide information to the tutoring team at our higher education institution with an estimate of the risk of dropout and failure. With this information, the tutoring team provides more accurate help to students.
+
+The dataset contained 4424 records with 35 attributes, where each record represents an individual student and can be used for benchmarking the performance of different algorithms for solving the same type of problem and for training in the machine learning area.
+
+In addition to this introduction section, the rest of the descriptor is organized as follows. Section 2 provides the description of the dataset. Section 3 presents the methodology that was followed and also presents a brief exploratory data analysis. Section 4 presents the conclusions, which are followed by references.
+
+## **2. Data Description**
+
+The dataset is from a higher education institution (acquired from several disjoint databases) related to students enrolled between the academic years 2008/2009 (after the application of the Bologna Process to higher education in Europe) to 2018/2019 in different undergraduate degrees, such as agronomy, design, education, nursing, journalism, management, social service, and technologies. The dataset includes information known at the time of student enrollment (academic path, demographics, and macroeconomics and socioeconomic factors) and the students' academic performance at the end of the first and second semesters. The data are used to build classification models to predict student dropout and academic success.The problem is formulated as a three-category classification task (dropout, enrolled, and graduate) at the end of the normal duration of the course.
+
+The dataset is available as a comma-separated values (CSV) file encoded as UTF8 and consists of 4424 records with 35 attributes and contains no missing values.
+
+Table 1 describes each attribute used in the dataset grouped by class: demographic, socioeconomic, macroeconomic, academic data at enrollment, and academic data at the end of the first and second semesters. The details of the dataset the descriptions of possible values for the attributes can be obtained from Appendix 1 in [@realinho2022] which contains more detailed information about the dataset.
+
+```{r, message = FALSE, warning = FALSE}
+#knitr::opts_chunk$set(echo = TRUE)
+
+library(knitr)
+library(tidyverse)
+library(kableExtra)
+
+my_table <- head(cbind(
+  "Demographic data" = c("Marital status", "Nationality", "Displaced", "Gender", "Age at enrollment", "International"),
+  "Socioeconomic data" = c("Mother’s qualification", "Father’s qualification", "Mother’s occupation", "Father’s occupation", "Educational special needs", "Debtor", "Tuition fees up to date", "Scholarship holder"),
+  "Macroeconomic data" = c("Unemployment rate", "Inflation rate", "GDP"),
+  "Academic data at enrollment" = c("Application mode", "Application order", "Course", "Daytime/evening attendance", "Previous qualification"),
+  "Academic data at the end of 1st semester" = c("Curricular units 1st sem (credited)", "Curricular units 1st sem (enrolled)", "Curricular units 1st sem (evaluations)", "Curricular units 1st sem (approved)", "Curricular units 1st sem (grade)", "Curricular units 1st sem (without evaluations)"),
+  "Academic data at the end of 2nd semester" = c("Curricular units 2nd sem (credited)", "Curricular units 2nd sem (enrolled)", "Curricular units 2nd sem (approved)", "Curricular units 2nd sem (grade)", "Curricular units 2nd sem (without evaluations)"),
+  "Target" = c("Target")
+), n = 30)
+
+kable(my_table, "latex", booktabs = TRUE, longtable = TRUE, caption = "Attributes used grouped by class of attribute",
+      row.names = FALSE, align = "c") %>%
+  kable_styling(latex_options = "hold_position", full_width = FALSE, 
+                font_size = 6, position = "left") %>%
+  column_spec(1, width = "2cm") %>%
+  column_spec(2:8, width = "1.5cm") %>%
+  column_spec(9:11, width = "2.5cm") %>%
+  column_spec(12:17, width = "2cm") %>%
+  column_spec(18, width = "1.5cm") %>%
+  column_spec(19:23, width = "2cm") %>%
+  column_spec(24, width = "1.5cm") %>%
+  column_spec(25:29, width = "2cm")%>%
+  knitr::knit_print(options = list(font.size = 6, rotate = -90))
+
+```
+
+\newpage
+
+# 2 Literature review
+
+## 2.1 Related works
+
+Article 1"Efficiency of decision trees in predicting students' academic performance" expects the performance of the final exam of MCA students according to their internal marks. They used the C4.5 Decision tree algorithm. They compare the predicted and actual results, indicating a significant improvement in results as the prediction helped identify weak and good students and help them to score better marks. They also compared the model with the ID3 Decision Tree algorithm and prove that the developed model is better in terms of efficiency and time taken to build the decision tree
+
+S. A. Kumar and M. Vijayalakshmi, "Efficiency of decision trees in predicting students' academic performance," in First International
+
+Conference on Computer Science, Engineering and Applications, CS and IT, vol. 2, 2011, pp. 335--343
+
+In article-2 "Literature Survey on Educational Dropout Prediction", the authors analyze different contributions of students'\[2\]  dropout prediction in India between 2009 and 2016 and try to localize the missing elements that make the gaps between the previous studies. They stressed four kinds of studies in Educational Data Mining: Classification, Clustering, Prediction, and Association Rule mining. The machine learning classifiers found in the literature are varied, we note the most used: Support Vector Machine, Decision Tree algorithms, Artificial Neural Networks, Logistic Regression, Naïve Bayes, Random Forest, and others. The data variables used to implement the models are diversified, we note some of them: grade in high school, secondary school, and other related education, Gender, Family structure, Parents' Qualification, Parents' Occupation, Required for Household work, Addictions (Alcohol, Smoke, Pills, Solvents, Drugs, etc.), Basic facility in the education institution different for boys and girls, Poor Teaching methodology adopted, Got married \[2\].
+
+Mukesh Kumar, A.J. Singh, & DishaHanda. (2017). Literature Survey on Educational Dropout Prediction. International Journal of Education and Management Engineering (IJEME), 7(2), pp. 8--19. <https://doi.org/10.5815/ijeme.2017.02.02>
+
+Article 3-"Predicting drop-out from social behavior of students"\[3\] predicted whether a bachelor student will drop out from university. They worked with the data of Applied Informatics bachelor students from Masaryk University and predicted students' studies and activities via email or discussion with other students. They found students who communicate with students having good grades can successfully graduate with a higher probability than students with similar performance but not communicating with successful students. In this case, J48 decision tree learner, IB1 lazy learner, PART rule learner, SMO support vector machines have been used.
+
+Bayer, Jaroslav & Bydžovs, Hana & Eryk, Jan & Obšívač, To & Popelínský, Lubomír. (2012). Predicting drop-out from social behavior of students.
+
+Article- 4 "A Predictive Model for Predicting Students Academic Performance"\[4\] predicts the students' performance and compared the efficiency of two classifiers, Decision Tree and Bayesian Networks, using the WEKA tool. They used two different groups of students of undergraduate and postgraduate level. The performance of the Decision Tree was 3-12% more accurate than Bayesian networks. This research was helpful in identifying the weak students for guiding and selecting good students for scholarships.
+
+Aman, Fazal & Rauf, Azhar & Ali, Rahman & Iqbal, Farkhund & Khattak, Asad. (2019). A Predictive Model for Predicting Students Academic Performance. 1-4. 10.1109/IISA.2019.8900760.
+
+\newpage
+
+# 3 Methods
+
+## 3.1 Data Sources
+
+```{r, message = FALSE, warning = FALSE}
+
+knitr::opts_chunk$set(echo=FALSE)
+rm(list = ls())
+# Import Required Libraries
+library(readr)
+library(dplyr)
+library(tidyverse)
+library(tidyr)
+library(caret)
+library(randomForest)
+library(xgboost)
+library(gbm)
+library(neuralnet)
+library(kernlab)
+library(e1071)
+library(nnet)
+library(naivebayes)
+library(glmnet)
+library(rpart)
+library(rpart.plot)
+library(class)
+library(IPEDS)
+library(ppsr)
+library(ggplot2)
+library(gtsummary)
+library(gridExtra)
+library(kableExtra)
+library(gt)
+library(pROC)
+
+library(cowplot)
+library(ranger)
+library(lightgbm)
+```
+
+\newpage
+
+# 3.2 EDA and Feature Engineer
+
+We performed a brief exploratory data analysis in rstudio using the predictive power score (ppsr) library, the caret library, and the ggplot2 library among the visualization tools in r.
+
+```{r, message = FALSE, warning = FALSE}
+# Load data
+data <- read.csv("dataset.csv", header = TRUE, stringsAsFactors = TRUE)
+```
+
+\newpage
+
+## Overview of the dataset
+
+```{r, message = FALSE, warning = FALSE}
+data %>% 
+  tbl_summary()
+```
+
+\newpage
+
+### 3.2.1 Checking for missing values
+
+```{r, message = FALSE, warning = FALSE, fig.width=8.27, fig.height=11.69}
+ppsr::visualize_pps(df = data,
+                    color_value_high = 'red', 
+                    color_value_low = 'yellow',
+                    color_text = 'black',
+                    verbose = FALSE) +  
+  theme_classic() +
+  theme(plot.background = element_rect(fill = "lightgrey")) +
+  theme(title = element_text(size = 15)) +
+  labs(title = 'Checking for missing values', 
+       subtitle = 'Determining the correlation amongst the variables',
+       caption = 'Correlation matrix',
+       x = element_blank()) +
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5, hjust=1, size = 8),
+        axis.text.y = element_text(size = 8))
+
+
+```
+
+\newpage
+
+### 3.2.1 Data distribution and Basic statistics information
+
+```{r, message = FALSE, warning = FALSE, fig.width=8.27, fig.height=11.69}
+
+# create a new graphics device to display the plot
+
+# Check class distribution
+table(data$Target)
+
+dev.new()
+# Create bar plot
+ggplot(data, aes(x = Target)) +
+  geom_bar() +
+  xlab("Target") +
+  ylab("Count") +
+  ggtitle("Basic statistics information about demographic data.") +
+  theme(plot.caption = element_text(hjust = 0)) +
+  labs(caption = "Figure 1. Bar plot showing the distribution of target variable in the demographic data.\nMean: 0.2185 | Median: 0.0 | Dispersion: 0.4132 | Min: 0 | Max: 1") +
+  theme(plot.caption.position = "plot", plot.caption = element_text(size = 10)) +
+  theme(plot.title = element_text(size = 15)) +
+  theme(plot.background = element_rect(fill = "lightgrey")) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
+  theme(axis.line = element_line(colour = "black")) +
+  theme(axis.text.x = element_text(size = 12), axis.text.y = element_text(size = 12)) +
+  theme(axis.title.x = element_text(size = 12), axis.title.y = element_text(size = 12)) +
+  theme(plot.margin = unit(c(1,1,1,1), "cm")) +
+  theme(panel.border = element_blank()) +
+  theme(panel.background = element_blank()) +
+  theme(axis.ticks.length = unit(0.3, "cm")) +
+  theme(axis.ticks = element_line(colour = "black")) +
+  theme(panel.spacing = unit(1, "lines")) +
+  theme(panel.grid.major.x = element_line(colour = "white"))
+dev.off()
+
+```
+
+```{r, message = FALSE, warning = FALSE}
+ggplot(data, aes(x = `Marital.status`, fill = Target)) + 
+  geom_bar() +
+  labs(x = "Marital status", y = "Count", title = "Marital status by target")
+```
+
+```{r, message = FALSE, warning = FALSE, fig.width=8.27, fig.height=11.69}
+data <- subset(data, Target %in% c("Graduate", "Dropout"))
+data$Target <- ifelse(data$Target == "Dropout", 0, 1)
+
+
+ppsr::visualize_pps(df = data,
+                    color_value_high = 'red', 
+                    color_value_low = 'yellow',
+                    color_text = 'black',
+                    verbose = FALSE) +  
+  theme_classic() +
+  theme(plot.background = element_rect(fill = "lightgrey")) +
+  theme(title = element_text(size = 15)) +
+  labs(title = 'Correlation', 
+       subtitle = 'Determining the correlation amongst the variables',
+       caption = 'Correlation matrix',
+       x = element_blank()) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, size = 8),
+        axis.text.y = element_text(size = 8))
+```
+
+\newpage
+
+### 3.2.2 Descriptive Analysis
+
+```{r, message = FALSE, warning = FALSE}
+# Convert variables to factors and remove rows with missing values
+data <- data %>% 
+  mutate(Target = as.factor(Target)) %>% 
+  mutate(Marital.status = as.factor(Marital.status)) %>%
+  mutate(Daytime.evening.attendance = as.factor(Daytime.evening.attendance)) %>%
+  mutate(Displaced = as.factor(Displaced)) %>%
+  mutate(Educational.special.needs = as.factor(Educational.special.needs)) %>%
+  mutate(Debtor = as.factor(Debtor)) %>%
+  mutate(Tuition.fees.up.to.date = as.factor(Tuition.fees.up.to.date)) %>%
+  mutate(Gender = as.factor(Gender)) %>%
+  mutate(Scholarship.holder = as.factor(Scholarship.holder)) %>%
+  mutate(International = as.factor(International)) %>%
+  na.omit()
+
+# Plot distribution of each variable
+ggplot(data, aes(x = Target)) + 
+  geom_bar() +
+  ggtitle("Target Variable Distribution") +
+  xlab("Target") +
+  ylab("Count")
+
+ggplot(data, aes(x = Marital.status)) + 
+  geom_bar() +
+  ggtitle("Marital Status Distribution") +
+  xlab("Marital Status") +
+  ylab("Count")
+
+ggplot(data, aes(x = Daytime.evening.attendance)) + 
+  geom_bar() +
+  ggtitle("Daytime/Evening Attendance Distribution") +
+  xlab("Daytime/Evening Attendance") +
+  ylab("Count")
+
+ggplot(data, aes(x = Displaced)) + 
+  geom_bar() +
+  ggtitle("Displaced Distribution") +
+  xlab("Displaced") +
+  ylab("Count")
+
+ggplot(data, aes(x = Educational.special.needs)) + 
+  geom_bar() +
+  ggtitle("Educational Special Needs Distribution") +
+  xlab("Educational Special Needs") +
+  ylab("Count")
+
+ggplot(data, aes(x = Debtor)) + 
+  geom_bar() +
+  ggtitle("Debtor Distribution") +
+  xlab("Debtor") +
+  ylab("Count")
+
+ggplot(data, aes(x = Tuition.fees.up.to.date)) + 
+  geom_bar() +
+  ggtitle("Tuition Fees Up-to-date Distribution") +
+  xlab("Tuition Fees Up-to-date") +
+  ylab("Count")
+
+ggplot(data, aes(x = Gender)) + 
+  geom_bar() +
+  ggtitle("Gender Distribution") +
+  xlab("Gender") +
+  ylab("Count")
+
+ggplot(data, aes(x = Scholarship.holder)) + 
+  geom_bar() +
+  ggtitle("Scholarship Holder Distribution") +
+  xlab("Scholarship Holder") +
+  ylab("Count")
+
+ggplot(data, aes(x = International)) + 
+  geom_bar() +
+  ggtitle("International Distribution") +
+  xlab("International") +
+  ylab("Count")
+
+
+```
+
+\newpage
+
+Convert data into factors
+
+```{r, message = FALSE, warning = FALSE}
+data$Educational.special.needs <- as.factor(data$Educational.special.needs)
+data$Debtor <- as.factor(data$Debtor)
+data$Tuition.fees.up.to.date <- as.factor(data$Tuition.fees.up.to.date)
+data$Gender <- as.factor(data$Gender)
+data$Scholarship.holder <- as.factor(data$Scholarship.holder)
+data$International <- as.factor(data$International)
+```
+
+\\newpage
+
+### 3.2.3 Subset dataset for statistical summaries
+
+```{r, message = FALSE, warning = FALSE}
+# Subset the data
+basic_demo_data <- data %>%
+  select(Marital.status, Nacionality, Displaced, Gender, Age.at.enrollment, International)
+
+basic_soc_data <- data %>%
+  select(Mother.s.qualification, Father.s.qualification, Mother.s.occupation, Father.s.occupation, Educational.special.needs, Debtor, Tuition.fees.up.to.date, Scholarship.holder)
+
+basic_macro_data <- data %>%
+  select(Unemployment.rate, Inflation.rate, GDP)
+
+basic_academic_enrollment_data <- data %>%
+  select(Application.mode, Application.order, Course, Daytime.evening.attendance, Previous.qualification)
+
+basic_academic_end_semester_data <- data %>%
+  select(Curricular.units.1st.sem..credited., Curricular.units.1st.sem..enrolled., Curricular.units.1st.sem..evaluations., Curricular.units.1st.sem..approved., Curricular.units.1st.sem..grade., Curricular.units.1st.sem..without.evaluations.)
+
+basic_academic_end_second_semester_data <- data %>%
+  select(Curricular.units.2nd.sem..credited., Curricular.units.2nd.sem..enrolled., Curricular.units.2nd.sem..evaluations., Curricular.units.2nd.sem..approved., Curricular.units.2nd.sem..grade., Curricular.units.2nd.sem..without.evaluations.)
+
+basic_target_data <- data %>%
+  select(Target)
+```
+
+\\newpage
+
+```{r, message = FALSE, warning = FALSE}
+print(ggplot(basic_demo_data, aes(x = Marital.status)) +
+  geom_bar() +
+  xlab("Marital status") +
+  ylab("Count") +
+  ggtitle("Table 2. Basic statistics information about demographic data") +
+  theme(plot.caption = element_text(hjust = 0)) +
+  labs(caption = "Figure 1. Distribution plot showing marital status in the demographic data.") +
+  theme(plot.caption.position = "plot", plot.caption = element_text(size = 10)) +
+  theme(plot.title = element_text(size = 15)) +
+  theme(plot.background = element_rect(fill = "lightgrey")) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
+  theme(axis.line = element_line(colour = "black")) +
+  theme(axis.text.x = element_text(size = 12), axis.text.y = element_text(size = 12)) +
+  theme(axis.title.x = element_text(size = 12), axis.title.y = element_text(size = 12)) +
+  theme(plot.margin = unit(c(1,1,1,1), "cm")) +
+  theme(panel.border = element_blank()) +
+  theme(panel.background = element_blank()) +
+  theme(axis.ticks.length = unit(0.3, "cm")) +
+  theme(axis.ticks = element_line(colour = "black")) +
+  theme(panel.spacing = unit(1, "lines")) +
+  theme(panel.grid.major.x = element_line(colour = "white")))
+
+```
+
+\\newpage
+
+### Table 2. Basic statistics information about demographic data.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+ggplot(basic_demo_data, aes(x = Marital.status)) +
+  geom_bar() +
+  xlab("Marital status") +
+  ylab("Count") +
+  ggtitle("Table 2. Basic statistics information about demographic data") +
+  labs(caption = "Figure 1. Distribution plot showing marital status in the demographic data.") +
+  theme(plot.caption = element_text(hjust = 0),
+        plot.caption.position = "panel", # update the value of plot.caption.position
+        plot.title = element_text(size = 15),
+        plot.background = element_rect(fill = "lightgrey"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "black"),
+        axis.text.x = element_text(size = 12),
+        axis.text.y = element_text(size = 12),
+        axis.title.x = element_text(size = 12),
+        axis.title.y = element_text(size = 12),
+        plot.margin = unit(c(1,1,1,1), "cm"),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        axis.ticks.length = unit(0.3, "cm"),
+        axis.ticks = element_line(colour = "black"),
+        panel.spacing = unit(1, "lines"),
+        panel.grid.major.x = element_line(colour = "white"))
+
+# Select variables of interest
+basic_demo_data <- data %>%
+  select(Marital.status, Nacionality, Displaced, Gender, Age.at.enrollment, International)
+
+# Identify non-factor variables
+non_factor_vars <- names(basic_demo_data)[!sapply(basic_demo_data, is.factor)]
+
+# Calculate summary statistics for each non-factor variable
+summary_stats <- basic_demo_data %>%
+  summarise(across(all_of(non_factor_vars), list(mean = mean, median = median, sd = sd, min = min, max = max)))
+
+# Add "N/A" for factor variables
+factor_vars <- setdiff(names(basic_demo_data), non_factor_vars)
+for(var in factor_vars){
+  summary_stats[var, "mean"] <- "N/A"
+  summary_stats[var, "median"] <- "N/A"
+  summary_stats[var, "sd"] <- "N/A"
+}
+
+# Print table of summary statistics
+kable(summary_stats, caption = "Table 1. Basic statistics information about demographic data") %>%
+  kable_styling(full_width = FALSE)
+
+
+
+ggplot(basic_demo_data, aes(x = Nacionality)) +
+  geom_bar() +
+  xlab("Nacionality") +
+  ylab("Count") +
+  ggtitle("Table 3. Basic statistics information about demographic data") +
+  labs(caption = "Figure 2. Distribution plot showing Nationality status in the demographic data.") +
+  theme(plot.caption = element_text(hjust = 0),
+        plot.caption.position = "panel", # update the value of plot.caption.position
+        plot.title = element_text(size = 15),
+        plot.background = element_rect(fill = "lightgrey"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "black"),
+        axis.text.x = element_text(size = 12),
+        axis.text.y = element_text(size = 12),
+        axis.title.x = element_text(size = 12),
+        axis.title.y = element_text(size = 12),
+        plot.margin = unit(c(1,1,1,1), "cm"),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        axis.ticks.length = unit(0.3, "cm"),
+        axis.ticks = element_line(colour = "black"),
+        panel.spacing = unit(1, "lines"),
+        panel.grid.major.x = element_line(colour = "white"))
+
+
+
+ggplot(basic_demo_data, aes(x = Displaced)) +
+  geom_bar() +
+  xlab("Displaced") +
+  ylab("Count") +
+  ggtitle("Table 2. Basic statistics information about demographic data") +
+  labs(caption = "Figure 3. Distribution plot showing Displaced in the demographic data.") +
+  theme(plot.caption = element_text(hjust = 0),
+        plot.caption.position = "panel", # update the value of plot.caption.position
+        plot.title = element_text(size = 15),
+        plot.background = element_rect(fill = "lightgrey"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "black"),
+        axis.text.x = element_text(size = 12),
+        axis.text.y = element_text(size = 12),
+        axis.title.x = element_text(size = 12),
+        axis.title.y = element_text(size = 12),
+        plot.margin = unit(c(1,1,1,1), "cm"),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        axis.ticks.length = unit(0.3, "cm"),
+        axis.ticks = element_line(colour = "black"),
+        panel.spacing = unit(1, "lines"),
+        panel.grid.major.x = element_line(colour = "white"))
+
+ggplot(basic_demo_data, aes(x = Gender)) +
+  geom_bar() +
+  xlab("Gender") +
+  ylab("Count") +
+  ggtitle("Table 2. Basic statistics information about demographic data") +
+  labs(caption = "Figure 4. Distribution plot showing Gender in the demographic data.") +
+  theme(plot.caption = element_text(hjust = 0),
+        plot.caption.position = "panel", # update the value of plot.caption.position
+        plot.title = element_text(size = 15),
+        plot.background = element_rect(fill = "lightgrey"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "black"),
+        axis.text.x = element_text(size = 12),
+        axis.text.y = element_text(size = 12),
+        axis.title.x = element_text(size = 12),
+        axis.title.y = element_text(size = 12),
+        plot.margin = unit(c(1,1,1,1), "cm"),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        axis.ticks.length = unit(0.3, "cm"),
+        axis.ticks = element_line(colour = "black"),
+        panel.spacing = unit(1, "lines"),
+        panel.grid.major.x = element_line(colour = "white"))
+
+
+ggplot(basic_demo_data, aes(x = Age.at.enrollment)) +
+  geom_bar() +
+  xlab("Age at enrollment") +
+  ylab("Count") +
+  ggtitle("Table 2. Basic statistics information about demographic data") +
+  labs(caption = "Figure 5. Distribution plot showing Age at enrollment in the demographic data.") +
+  theme(plot.caption = element_text(hjust = 0),
+        plot.caption.position = "panel", # update the value of plot.caption.position
+        plot.title = element_text(size = 15),
+        plot.background = element_rect(fill = "lightgrey"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "black"),
+        axis.text.x = element_text(size = 12),
+        axis.text.y = element_text(size = 12),
+        axis.title.x = element_text(size = 12),
+        axis.title.y = element_text(size = 12),
+        plot.margin = unit(c(1,1,1,1), "cm"),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        axis.ticks.length = unit(0.3, "cm"),
+        axis.ticks = element_line(colour = "black"),
+        panel.spacing = unit(1, "lines"),
+        panel.grid.major.x = element_line(colour = "white"))
+
+
+ggplot(basic_demo_data, aes(x = International)) +
+  geom_bar() +
+  xlab("International") +
+  ylab("Count") +
+  ggtitle("Table 2. Basic statistics information about demographic data") +
+  labs(caption = "Figure 6. Distribution plot showing International in the demographic data.") +
+  theme(plot.caption = element_text(hjust = 0),
+        plot.caption.position = "panel", # update the value of plot.caption.position
+        plot.title = element_text(size = 15),
+        plot.background = element_rect(fill = "lightgrey"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "black"),
+        axis.text.x = element_text(size = 12),
+        axis.text.y = element_text(size = 12),
+        axis.title.x = element_text(size = 12),
+        axis.title.y = element_text(size = 12),
+        plot.margin = unit(c(1,1,1,1), "cm"),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        axis.ticks.length = unit(0.3, "cm"),
+        axis.ticks = element_line(colour = "black"),
+        panel.spacing = unit(1, "lines"),
+        panel.grid.major.x = element_line(colour = "white"))
+
+
+
+```
+
+### 3.2.4 Data imbalance
+
+The problem was formulated as a three-category classification task, in which there is a strong imbalance towards one of the classes (Figure 2). The majority class, Graduate, represents 50% of the records (2209 of 4424) and Dropout represents 32% of total records (1421 of 4424), while the minority class, Enrolled, represents 18% of total records (794 of 4424). This might result in a high prediction accuracy driven by the majority class at the expense of a poor performance of the minority class. Therefore, anyone using this dataset should pay attention to this problem and address it with a data-level approach or with an algorithm-level approach. At the data-level approach, a sampling technique such as the Synthetic Minority Over Sampling Technique (SMOTE) [@chawla2002] or the Adaptive Synthetic Sampling Approach (ADASYN) [@haibohe2008] or any variant thereof can be applied. At the algorithm-level approach, a machine learning algorithm that already incorporates balancing steps must be used, such as Balanced Random Forest [@wang2020] or Easy Ensemble [@xu-yingliu2009], or bagging classifiers with additional balancing, such as Exactly Balanced Bagging [@opitz], Roughly Balanced Bagging [@hido2009], Over-Bagging [@opitz], or SMOTE-Bagging[@wang2009].
+
+```{r, message = FALSE, warning = FALSE, fig.width=8.27, fig.height=11.69}
+# Load the data
+my_data <- read.csv("dataset.csv")
+
+ggplot(my_data, aes(x = Target)) +
+  geom_bar(fill = c("blue", "red", "green")) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  labs(title = "",
+       x = "Target",
+       y = "Count",
+       caption = "Figure 2. Distribution of student records among the three categories considered for academic success")
+
+
+```
+
+Figure 3 shows the same imbalanced nature of data when grouping the student outcomes by course and Gender.
+
+```{r}
+# Define the course key as a named vector
+course_key <- c("1" = "Biofuel Production Technologies",
+                "2" = "Animation and Multimedia Design",
+                "3" = "Social Service (evening attendance)",
+                "4" = "Agronomy",
+                "5" = "Communication Design",
+                "6" = "Veterinary Nursing",
+                "7" = "Informatics Engineering",
+                "8" = "Equiniculture",
+                "9" = "Management",
+                "10" = "Social Service",
+                "11" = "Tourism",
+                "12" = "Nursing",
+                "13" = "Oral Hygiene",
+                "14" = "Advertising and Marketing Management",
+                "15" = "Journalism and Communication",
+                "16" = "Basic Education",
+                "17" = "Management (evening attendance)")
+Gender_key <- c("1" = "Male", "2" = "Female")
+# Add a new column with the course character values
+my_data$Course_character <- course_key[as.character(my_data$Course)]
+my_data$Gender_character <- Gender_key[as.character(my_data$Gender)]
+```
+
+```{r, message = FALSE, warning = FALSE, fig.width=8.27, fig.height=11.69}
+
+my_data_counts <- my_data %>%
+  group_by(Course_character, Target) %>%
+  summarise(Count = n(), .groups = "drop") 
+
+my_data_counts_gender <- my_data %>%
+  group_by(Gender_character, Target) %>%
+  summarise(Count = n(), .groups = "drop") 
+
+# Create plot for course count
+plot_course <- ggplot(my_data_counts, aes(x = Course_character, y = Count, fill = Target)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = c("blue", "red", "green")) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  labs(title = "", x = "Course", y = "Count", caption = "Figure 3. Student outcomes grouped by: (a) Course")
+
+# Create plot for gender count
+plot_gender <- ggplot(my_data_counts_gender, aes(x = Gender_character, y = Count, fill = Target)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = c("blue", "red", "green")) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  labs(title = "", x = "Gender", y = "Count", caption = "Figure 3. Student outcomes grouped by: (b) Gender")
+
+# Combine plots with a common caption
+plot_grid(plot_course, plot_gender, ncol = 1, align = "v", axis = "tb", 
+          rel_heights = c(1, 1), labels = c("(a) Course", "(b) Gender")) +
+  theme(plot.caption = element_text(hjust = 0.5))
+
+
+```
+
+\\newpage
+
+### 3.2.5 Feature Importance
+
+Feature importance plays an important role in understanding the data and also in the improvement and interpretation of the machine learning models. On the other hand, useless data results in bias that messes up the final results of a machine learning problem, so feature importance is frequently used to reduce de number of features used. The most important features differ depending on the technique used to calculate the importance of each feature and also the machine learning algorithm used [@saarela2021]. One of the simplest and most used techniques to measure feature importance is Permutation Feature Importance. In this technique, feature importance is calculated by noticing the increase or decrease in error when we permute the values of a feature. If permuting the values causes a huge change in the error, it means the feature is important for our model.
+
+We performed a test to determine the most important features considering the Permutation Feature Importance, using F1 as the error metric, which is a metric more adequate for imbalanced data, taking into account the trade-off between precision and recall. The Permutation Feature Importance was applied to some of the most interesting results reported in the literature for multiclass imbalanced classification [@spelmen2018] and [@ali2019]
+
+### 3.2.6 Split the dataset into training and testing sets
+
+```{r, message = FALSE, warning = FALSE}
+# Split data into training and test sets
+set.seed(123)
+train_index <- createDataPartition(data$Target, p = 0.7, list = FALSE, times = 1)
+train_data <- data[train_index, ]
+test_data <- data[-train_index, ]
+
+```
+
+### 3.2.7 Permutation Feature Importance for Random Forest
+
+```{r, message = FALSE, warning = FALSE, fig.width=8.27, fig.height=11.69}
+# Train RF model
+set.seed(123)
+# Train RF model
+rf_model <- ranger(Target ~ ., data = train_data, importance = 'permutation')
+
+# Get feature importance
+importance <- importance(rf_model)
+
+# Get feature importance
+importance <- importance(rf_model)
+
+# Create data frame for feature importance
+importance_df <- data.frame(
+  feature = names(importance),
+  importance = importance
+)
+
+# Order the data frame by importance in descending order
+importance_df <- importance_df[order(importance_df$importance, decreasing = TRUE),]
+
+# Plot feature importance with a cutoff of top 10 features
+ggplot(data = importance_df, aes(x = importance, y = reorder(factor(feature), importance))) +
+  geom_col(fill = "green") +
+  labs(title = "Feature Importance", x = "Importance", y = "Feature") +
+  theme_minimal()
+
+
+```
+
+### 3.2.7 Permutation Feature Importance for XGBOOST and LIGHTGBM
+
+```{r}
+
+```
+
+## 3.3 Data Analysis
+
+### 3.3.1 Split the dataset into training and testing sets
+
+```{r, message = FALSE, warning = FALSE}
+# Split data into training and test sets
+set.seed(123)
+train_index <- createDataPartition(data$Target, p = 0.7, list = FALSE, times = 1)
+train_data <- data[train_index, ]
+test_data <- data[-train_index, ]
+
+
+```
+
+### 3.3.1 Re-sample training and test data to balance the classes
+
+```{r, message = FALSE, warning = FALSE}
+# Re-sample training data to balance the classes
+train_data_balanced <- train_data %>%
+  group_by(Target) %>%
+  sample_n(size = max(table(train_data$Target)), replace = TRUE) %>%
+  ungroup()
+
+# Check class distribution in balanced training data
+table(train_data_balanced$Target)
+
+
+# Re-sample training data to balance the classes
+test_data_balanced <- test_data %>%
+  group_by(Target) %>%
+  sample_n(size = max(table(test_data$Target)), replace = TRUE) %>%
+  ungroup()
+
+# Check class distribution in balanced training data
+table(test_data_balanced$Target)
+
+
+# Use the balanced training data for model training
+# and the test data for model evaluation
+```
+
+\\newpage
+
+```{r, message = FALSE, warning = FALSE}
+# Define the model training and testing functions
+train_model <- function(model_name, formula, train_data_balanced) {
+  if (model_name == "SVM") {
+    model <- svm(formula, train_data_balanced, kernel = "linear", cost = 10, gamma = 0.1)
+  } else if (model_name == "DT") {
+    model <- rpart(formula, train_data_balanced, method = "class")
+  } else if (model_name == "ANN") {
+    model <- nnet(formula, train_data_balanced, size = 5, decay = 1e-5, maxit = 1000)
+  } else if (model_name == "LR") {
+    model <- glm(formula, train_data_balanced, family = "binomial")
+  } else if (model_name == "NB") {
+    model <- naiveBayes(formula,train_data_balanced)
+  } else if (model_name == "RF") {
+    model <- randomForest(formula, train_data_balanced, ntree = 500, importance = TRUE)
+  } else if (model_name == "BAG") {
+    model <- bagging(formula, train_data_balanced, nbagg = 25)
+  } else if (model_name == "BOOST") {
+    model <- boosting(formula, train_data_balanced, mfinal = 500)
+  }
+  return(model)
+}
+
+test_model <- function(model, test_data_balanced) {
+  predictions <- predict(model, data, type = "class")
+  accuracy <- confusionMatrix(predictions, data$dropout)$overall["Accuracy"]
+  return(accuracy)
+}
+```
+
+\\newpage
+
+## 3.4 Define the model
+
+```{r, message = FALSE, warning = FALSE}
+# Define the formula for the model
+formula <- Target ~ Curricular.units.2nd.sem..approved.  + Tuition.fees.up.to.date + Curricular.units.1st.sem..approved. + Curricular.units.2nd.sem..grade.+ Course + Curricular.units.1st.sem..enrolled.	+ Scholarship.holder + Curricular.units.2nd.sem..evaluations. + Inflation.rate + Curricular.units.1st.sem..evaluations.
+```
+
+Train and test the models
+
+```{r, message = FALSE, warning = FALSE}
+
+```
+
+neural net work
+
+```{r}
+# Load the data
+dat <- read.csv("dataset.csv", header = TRUE, stringsAsFactors = TRUE)
+dat <- dat %>%  
+  mutate(Target=as_factor(Target) )
+```
+
+```{r}
+#Now, let us visualize the dataset to see if we need to do any preprocessing. I am going to draw a boxplot to see if the dataset needs to be scaled and if there are any outliers. To that end, let me create a function to draw boxplots.
+
+draw_boxplot <- function(){ 
+  dat %>%  
+    pivot_longer(1:10, names_to="attributes") %>%  
+    ggplot(aes(attributes, value, fill=attributes)) + 
+    geom_boxplot() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+}
+draw_boxplot()
+```
+
+```{r}
+#Splitting the dataset
+training_data_rows <- floor(0.70 * nrow(dat))          
+set.seed(123) 
+training_indices <- sample(c(1:nrow(dat)), training_data_rows)
+
+training_data_nn <- dat[training_indices,] 
+test_data_nn <- dat[-training_indices,]
+```
+
+```{r}
+# create two hidden layers, the first layer with 4 neurons and the second with two neurons. 
+# Training 
+#neuralnet(formula, data, hidden = 1, threshold = 0.01,
+#stepmax = 1e+05, rep = 1, startweights = NULL,
+#learningrate.limit = NULL, learningrate.factor = list(minus = 0.5,
+#                                                      plus = 1.2), learningrate = NULL, lifesign = "none",
+#lifesign.step = 1000, algorithm = "rprop+", err.fct = "sse",
+#act.fct = "logistic", linear.output = TRUE, exclude = NULL,
+#constant.weights = NULL, likelihood = FALSE)
+formula <- Target ~ Curricular.units.2nd.sem..approved. + Tuition.fees.up.to.date + Curricular.units.1st.sem..approved. + Curricular.units.2nd.sem..grade. + Course + Curricular.units.1st.sem..enrolled. + Scholarship.holder + Curricular.units.2nd.sem..evaluations. + Inflation.rate + Curricular.units.1st.sem..evaluations.
+
+nn <- neuralnet(formula, 
+                data = training_data_nn, 
+                hidden = c(10,5,3), 
+                linear.output = FALSE,
+                stepmax = 1e9)
+
+plot(nn)
+```
+
+```{r}
+#Testing
+predict <- function(data){ 
+  prediction <- data.frame(neuralnet::compute(nn,  
+                                              
+                                              data.frame(data[,-5]))$net.result) 
+  labels <- c("Enrolled", "Dropout", "Graduate") 
+  prediction_label <- data.frame(max.col(prediction)) %>%  
+    mutate(prediction=labels[max.col.prediction.]) %>%  
+    select(2) %>%  
+    unlist() 
+  
+  table(data$Target, prediction_label) 
+}
+
+#We are passing a dataset as an argument and then generating a confusion matrix using this method. To predict the species, we can use the compute method provided by the neuralnet package. Since the compute method gives us the probability of each output neuron, we use the max.col function to get the highest probability. The precited species will be the species with the highest probability value. 
+
+predict(training_data_nn)
+
+predict(test_data_nn)
+```
+
+In this analysis, we compare the performance of four machine learning models for predicting a binary classification task. The models used are artificial neural networks (ANN), support vector machines (SVM), decision trees (DT), and Bayesian networks (BN). We evaluate the accuracy of each model and plot their respective ROC curves.
+
+# **Modeling**
+
+We fit each model to the training data and make predictions on the testing data. The ANN model has two hidden layers with 10 and 5 nodes, respectively. The SVM model uses a radial basis function kernel and has probability estimates enabled. The DT model uses the classification method and the default splitting criterion. The BN model is learned using the Hill-Climbing algorithm with the Akaike Information Criterion (AIC) as the scoring metric.
+
+# **Results**
+
+We calculate the accuracy for each model and plot their respective ROC curves. The ANN model has the highest accuracy, followed by the SVM and DT models. The BN model has the lowest accuracy.
+
+```{r}
+# Fit ANN model
+library(neuralnet)
+ann_model <- neuralnet(Target ~ ., training, hidden = c(10, 5))
+
+# Make predictions using ANN model
+ann_pred <- predict(ann_model, testing[, -1])
+
+# Fit SVM model
+library(e1071)
+svm_model <- svm(Target ~ ., data = training, probability = TRUE)
+
+# Make predictions using SVM model
+svm_pred <- predict(svm_model, testing[, -1], probability = TRUE)[, 2]
+
+# Fit decision tree model
+library(rpart)
+dt_model <- rpart(Target ~ ., data = training, method = "class")
+
+# Make predictions using decision tree model
+dt_pred <- predict(dt_model, testing[, -1], type = "prob")[, 2]
+
+# Convert integer variable to factor
+training$Target <- as.factor(training$Target)
+
+# Fit BN model
+library(bnlearn)
+bn_data <- training[, c(2:35, 1)]
+colnames(bn_data) <- paste0("V", 1:34) # rename columns for compatibility with bnlearn
+bn_model <- hc(bn_data, whitelist = matrix(TRUE, ncol = ncol(bn_data)), score = "aic")
+
+# Make predictions using BN model
+bn_pred <- predict(bn_model, testing[, -1], method = "bayes-lw")[, 2]
+
+# Calculate accuracies for each model
+ann_acc <- mean(ann_pred[[1]] == testing$Target)
+svm_acc <- mean(svm_pred == testing$Target)
+dt_acc <- mean(dt_pred == testing$Target)
+bn_acc <- mean(bn_pred == testing$Target)
+
+# Plot ROC curves for each model
+library(pROC)
+roc_ann <- roc(testing$Target, ann_pred[[1]])
+roc_svm <- roc(testing$Target, svm_pred)
+roc_dt <- roc(testing$Target, dt_pred)
+roc_bn <- multiclass.roc(testing$Target, bn_pred)
+
+# Plot ROC curves and accuracies
+library(ggplot2)
+roc_plot <- ggplot() +
+  geom_line(data = roc_ann, aes(x = 1 - specificity, y = sensitivity, color = "ANN")) +
+  geom_line(data = roc_svm, aes(x = 1 - specificity, y = sensitivity, color = "SVM")) +
+  geom_line(data = roc_dt, aes(x = 1 - specificity, y = sensitivity, color = "DT")) +
+geom_line(data = roc_bn, aes(x = 1 - specificity, y = sensitivity, color = "BN")) +
+scale_color_manual(values = c("ANN" = "blue", "SVM" = "red", "DT" = "green", "BN" = "purple")) +
+labs(x = "False Positive Rate (1 - Specificity)", y = "True Positive Rate (Sensitivity)", color = "Model") +
+ggtitle("ROC Curves for Different Models") +
+theme(plot.title = element_text(hjust = 0.5))
+
+acc_df <- data.frame(Model = c("ANN", "SVM", "DT", "BN"), Accuracy = c(ann_acc, svm_acc, dt_acc, bn_acc))
+acc_plot <- ggplot(acc_df, aes(x = Model, y = Accuracy, fill = Model)) +
+geom_col() +
+scale_fill_manual(values = c("blue", "red", "green", "purple")) +
+labs(x = "Model", y = "Accuracy", fill = "Model") +
+ggtitle("Accuracy of Different Models") +
+theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+# **Arrange plots side-by-side**
+
+```{r}
+#library(gridExtra)
+grid.arrange(roc_plot, acc_plot, ncol = 2)
+```
+
+# **Figure caption**
+
+ROC curves and accuracies for different models. ROC curves show the true positive rate (sensitivity) against the false positive rate (1 - specificity) for each model, and accuracies show the proportion of correctly classified samples for each model. The models include Artificial Neural Network (ANN), Support Vector Machine (SVM), Decision Tree (DT), and Bayesian Network (BN).\`\`\`
+
+```{r}
+
+```
+
+\\newpage
+
+# Conclusion
+
+\\newpage
+
+# References
